@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/avatar.gif" color="#222">
+  <meta name="google-site-verification" content="I0AdiK9ghFbhDtTfcIea3jMWVbELLTjqS9UbQTSKrgE">
+  <meta name="baidu-site-verification" content="code-eb03mxvDmN">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bwgvps.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="成功获得搬瓦工登录信息后，相信大家都迫不及待地去进行本地连接了吧，那么本地如何连接搬瓦工VPS呢，具体步骤是什么，有什么需要注意的地方呢？解答都在下文。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本地Windows&#x2F;Mac连接搬瓦工VPS教程">
+<meta property="og:url" content="https://bwgvps.github.io/connect-bandwagonhost-vps/index.html">
+<meta property="og:site_name" content="搬瓦工">
+<meta property="og:description" content="成功获得搬瓦工登录信息后，相信大家都迫不及待地去进行本地连接了吧，那么本地如何连接搬瓦工VPS呢，具体步骤是什么，有什么需要注意的地方呢？解答都在下文。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/vpik3ReQucjNSw2.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/fV8IWNSjOLhBP3H.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/R3Ho5fWlFM2JOr9.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/QhCZWRJxg45Br13.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg">
+<meta property="article:published_time" content="2021-07-18T09:24:27.000Z">
+<meta property="article:modified_time" content="2021-07-19T15:46:42.700Z">
+<meta property="article:author" content="搬瓦工">
+<meta property="article:tag" content="搬瓦工新手教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/19/vpik3ReQucjNSw2.png">
+
+<link rel="canonical" href="https://bwgvps.github.io/connect-bandwagonhost-vps/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>本地Windows/Mac连接搬瓦工VPS教程 | 搬瓦工</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">搬瓦工</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">搬瓦工中文网，搬瓦工VPS，BandwagonHost</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://bwgvps.github.io/connect-bandwagonhost-vps/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="搬瓦工">
+      <meta itemprop="description" content="搬瓦工，搬瓦工中文网，分享搬瓦工教程和搬瓦工优惠码。搬瓦工CN2 GIA、搬瓦工香港、搬瓦工日本、搬瓦工搭建、搬瓦工使用。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="搬瓦工">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          本地Windows/Mac连接搬瓦工VPS教程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-18 17:24:27" itemprop="dateCreated datePublished" datetime="2021-07-18T17:24:27+08:00">2021-07-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-19 23:46:42" itemprop="dateModified" datetime="2021-07-19T23:46:42+08:00">2021-07-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BandwagonHost/" itemprop="url" rel="index"><span itemprop="name">搬瓦工</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>获得信息后，大家会都迫切的去进行本地连接，但是呢实际操作又会出现一些障碍，所以本文就Windows系统和Mac系统如何进行搬瓦工 VPS本地连接，做了一份详细的教程，希望能对大家的操作有帮助。</p>
+<p>如果你还不知道搬瓦工VPS的连接信息是什么，相信这篇教程可以帮到你：<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
+<h2 id="Windows连接教程"><a href="#Windows连接教程" class="headerlink" title="Windows连接教程"></a>Windows连接教程</h2><p>要注意的是，Windows需要远程桌面的话需要借助PuTTY工具，这是一个口碑不错并且免费的SSH工具。</p>
+<p>第一步我们需要根据自己所用电脑的系统（32位还是64位）下载并安装好PuTTY工具。</p>
+<p>这里给大家给分享一下PuTTY官方下载地址：<a target="_blank" rel="noopener" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a></p>
+<p><img src="https://i.loli.net/2021/07/19/vpik3ReQucjNSw2.png" alt="下载PuTTY.png"></p>
+<p>随后打开PuTTY，会弹出填写信息的界面，如下图所示。在图中所标的位置进行如实填写SSH IP和端口，接着选择SSH连接类型、设置连接会话名称，点击“Save”进行保存，最后点击“Open”键开始连接登录：</p>
+<p><img src="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png" alt="填写SSH信息.png"></p>
+<p>如果是第一次使用PuTTY连接这台搬瓦工VPS，PuTTY会提示保存服务器指纹，直接点击“Accept”即可，保存后之后连接就不会再提示了：</p>
+<p><img src="https://i.loli.net/2021/07/19/fV8IWNSjOLhBP3H.png" alt="接受SSH.png"></p>
+<p>最后在随后出现的页面中输入用户名“root”、密码，如下图，就表明已经成功使用PuTTY连接上搬瓦工VPS了：</p>
+<p><img src="https://i.loli.net/2021/07/19/R3Ho5fWlFM2JOr9.jpg" alt="搬瓦工连接成功.png"></p>
+<h2 id="Mac连接教程"><a href="#Mac连接教程" class="headerlink" title="Mac连接教程"></a>Mac连接教程</h2><p>和Windows系统的连接方法相比，Mac实在是要方便的多，因为Mac可以直接使用自带的终端Terminal实现本地连接，不需要借助第三方软件：</p>
+<p><img src="https://i.loli.net/2021/07/19/QhCZWRJxg45Br13.png" alt="Mac自带Terminal.png"></p>
+<p>首先打开终端，输入ssh root@IP地址 -p ssh端口，记得把当中IP地址和SSH端口换成你自己VPS的信息：</p>
+<p><img src="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg" alt="Terminal命令.jpg"></p>
+<p>一样的是，如果是第一次连接，就需要保存VPS的签名密钥，输入“yes”保存即可。之后是输入SSH密码（此时不会显示），输入完毕后直接回车即可，只要信息填写都正确，就会出现连接成功的标志了。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" rel="tag"># 搬瓦工新手教程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/bandwagonhost-vps-info/" rel="prev" title="搬瓦工SSH连接信息查看：IP、端口、密码">
+      <i class="fa fa-chevron-left"></i> 搬瓦工SSH连接信息查看：IP、端口、密码
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/bandwagonhost-promotional-code/" rel="next" title="搬瓦工优惠码分享（2021年最新）">
+      搬瓦工优惠码分享（2021年最新） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E8%BF%9E%E6%8E%A5%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">Windows连接教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac%E8%BF%9E%E6%8E%A5%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">Mac连接教程</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="搬瓦工"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">搬瓦工</p>
+  <div class="site-description" itemprop="description">搬瓦工，搬瓦工中文网，分享搬瓦工教程和搬瓦工优惠码。搬瓦工CN2 GIA、搬瓦工香港、搬瓦工日本、搬瓦工搭建、搬瓦工使用。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">搬瓦工</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+
+<div class="powered-by">由 <a href="https://bwgvps.github.io" class="theme-link" rel="noopener" target="_blank">搬瓦工</a> &amp; <a href="https://github.com/bwgvps/bwgvps.github.io" class="theme-link" rel="noopener" target="_blank">BandwagonHost</a> 强力驱动 <a href="https://bwgvps.github.io/sitemap.xml" rel="noopener nofollow" target="_blank">sitemap</a> <a href="https://bwgvps.github.io/baidusitemap.xml" rel="noopener nofollow" target="_blank">百度sitemap</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

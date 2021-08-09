@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/avatar.gif" color="#222">
+  <meta name="google-site-verification" content="I0AdiK9ghFbhDtTfcIea3jMWVbELLTjqS9UbQTSKrgE">
+  <meta name="baidu-site-verification" content="code-eb03mxvDmN">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bwgvps.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="本文介绍如何在搬瓦工VPS上搭建安装Shadowsocks和ShadowsocksR代理实现科学上网翻墙，包括服务器搭建和客户端配置。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搬瓦工VPS搭建Shadowsocks&#x2F;ShadowsocksR(SS&#x2F;SSR)代理科学上网翻墙教程（2021年更新）">
+<meta property="og:url" content="https://bwgvps.github.io/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/index.html">
+<meta property="og:site_name" content="搬瓦工">
+<meta property="og:description" content="本文介绍如何在搬瓦工VPS上搭建安装Shadowsocks和ShadowsocksR代理实现科学上网翻墙，包括服务器搭建和客户端配置。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/jEat4KPFubg7YMw.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/UfQg4uqnCXGImy8.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/rOe1h3RDUQnEVsP.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/S26ekGT1HqsjiXE.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/ZESoj3hY9PFpGvJ.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/jEat4KPFubg7YMw.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/svaIr1gH7Zxiq36.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/9UlZAHocqPvdsNC.png">
+<meta property="article:published_time" content="2021-08-09T07:37:10.000Z">
+<meta property="article:modified_time" content="2021-08-09T07:40:48.371Z">
+<meta property="article:author" content="搬瓦工">
+<meta property="article:tag" content="搬瓦工翻墙教程">
+<meta property="article:tag" content="搬瓦工shadowsocks">
+<meta property="article:tag" content="搬瓦工shadowsocksr">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png">
+
+<link rel="canonical" href="https://bwgvps.github.io/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>搬瓦工VPS搭建Shadowsocks/ShadowsocksR(SS/SSR)代理科学上网翻墙教程（2021年更新） | 搬瓦工</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">搬瓦工</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">搬瓦工中文网，搬瓦工VPS，BandwagonHost</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://bwgvps.github.io/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="搬瓦工">
+      <meta itemprop="description" content="搬瓦工，搬瓦工中文网，分享搬瓦工教程和搬瓦工优惠码。搬瓦工CN2 GIA、搬瓦工香港、搬瓦工日本、搬瓦工搭建、搬瓦工使用。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="搬瓦工">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搬瓦工VPS搭建Shadowsocks/ShadowsocksR(SS/SSR)代理科学上网翻墙教程（2021年更新）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-09 15:37:10 / 修改时间：15:40:48" itemprop="dateCreated datePublished" datetime="2021-08-09T15:37:10+08:00">2021-08-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BandwagonHost/" itemprop="url" rel="index"><span itemprop="name">搬瓦工</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Shadowsocks(SS)以及ShadowsocksR(SSR)是之前用的非常多的代理工具，虽然现在逐渐被<a href="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/">V2Ray</a>取代了，但是还是有不少朋友习惯使用SS/SSR，本文分享如何在搬瓦工VPS上搭建SS/SSR代理。</p>
+<h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
+<p>本站推荐的搬瓦工套餐如下：</p>
+<table>
+<thead>
+<tr>
+<th>套餐</th>
+<th>CPU</th>
+<th>内存</th>
+<th>硬盘</th>
+<th>宽带</th>
+<th>流量/月</th>
+<th>价格</th>
+<th>购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>美国CN2 GT</td>
+<td>1核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>1Gbps</td>
+<td>1TB</td>
+<td>$49.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/57">立即购买</a></td>
+</tr>
+<tr>
+<td>美国CN2 GIA</td>
+<td>2核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>2.5Gbps</td>
+<td>1TB</td>
+<td>$49.99/季度$169.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/87">立即购买</a></td>
+</tr>
+<tr>
+<td>香港CN2 GIA</td>
+<td>2核</td>
+<td>2GB</td>
+<td>40G</td>
+<td>1Gbps</td>
+<td>500GB</td>
+<td>$89.99/月$899.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/95">立即购买</a></td>
+</tr>
+</tbody></table>
+<p>详细的搬瓦工注册与购买教程可以参考<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</a></p>
+<h2 id="连接搬瓦工VPS"><a href="#连接搬瓦工VPS" class="headerlink" title="连接搬瓦工VPS"></a>连接搬瓦工VPS</h2><p>买好搬瓦工VPS后，搬瓦工会将VPS的连接信息发到你的注册邮箱，root密码可以在KiwiVM控制面板查看，详细教程可以参考<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
+<p>找到连接信息后，就是在本地连接搬瓦工VPS了，Windows用户可以使用PuTTY，Mac用户可以使用自带的终端。</p>
+<p><strong>Windows连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png" alt="填写SSH信息.png"></p>
+<p><strong>Mac连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg" alt="Terminal命令.jpg"></p>
+<p>详细图文教程：<a href="https://bwgvps.github.io/connect-bandwagonhost-vps/">本地Windows/Mac连接搬瓦工VPS教程
+</a></p>
+<h2 id="搭建Shadowsocks代理"><a href="#搭建Shadowsocks代理" class="headerlink" title="搭建Shadowsocks代理"></a>搭建Shadowsocks代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
+<p>本文介绍的Shadowsocks脚本是四合一，我们<strong>只需要安装一种代理</strong>就可以了。</p>
+<p>输入下面命令搭建Shadowsocks，一共3个命令，分别表示下载脚本、赋予脚本执行命令和执行脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+<p>如下图所示：</p>
+<p><img src="https://i.loli.net/2021/08/09/jEat4KPFubg7YMw.png" alt="ss-all.png"></p>
+<p>这里如果提示<code>wget: command not found</code>，则先安装curl：</p>
+<ul>
+<li>Ubuntu/Debian系统安装wget方法: <code>apt-get update -y &amp;&amp; apt-get install wget -y</code></li>
+<li>CentOS系统安装wget方法: <code>yum update -y &amp;&amp; yum install wget -y</code></li>
+</ul>
+<p>安装好wget后再依次运行上面的三个命令即可。</p>
+<p>脚本会提示一些选项，包括安装的Shadowsocks版本、端口号、密码等，我们可以自己设置，也可以直接“回车”使用默认设置：</p>
+<p><img src="https://i.loli.net/2021/08/09/UfQg4uqnCXGImy8.png" alt="ss-all-options.png"></p>
+<p>以及Shadowsocks加密方式，也可以直接选择默认的：</p>
+<p><img src="https://i.loli.net/2021/08/09/rOe1h3RDUQnEVsP.png" alt="ss-all-cipher.png"></p>
+<p>最后，按下任意键盘开始安装：</p>
+<p><img src="https://i.loli.net/2021/08/09/S26ekGT1HqsjiXE.png" alt="ss-all-start.png"></p>
+<p>如下图所示，表示Shadowsocks已经安装完毕，包括IP地址、端口、密码、加密方式，以及二维码和SS链接：</p>
+<p><img src="https://i.loli.net/2021/08/09/ZESoj3hY9PFpGvJ.png" alt="ss-all-end.png"></p>
+<h2 id="搭建ShadowsocksR代理"><a href="#搭建ShadowsocksR代理" class="headerlink" title="搭建ShadowsocksR代理"></a>搭建ShadowsocksR代理</h2><p>再说一遍，本文介绍的Shadowsocks脚本是四合一，我们<strong>只需要安装一种代理</strong>就可以了，如果你已经安装上一部分的脚本安装了SS，就不需要安装SSR了。</p>
+<p>同样是在连上搬瓦工VPS后，执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+<p>如下图所示：</p>
+<p><img src="https://i.loli.net/2021/08/09/jEat4KPFubg7YMw.png" alt="ss-all.png"></p>
+<p>这里如果提示<code>wget: command not found</code>，则先安装curl：</p>
+<ul>
+<li>Ubuntu/Debian系统安装wget方法: <code>apt-get update -y &amp;&amp; apt-get install wget -y</code></li>
+<li>CentOS系统安装wget方法: <code>yum update -y &amp;&amp; yum install wget -y</code></li>
+</ul>
+<p>安装好wget后再依次运行上面的三个命令即可。</p>
+<p>这次我们选择ShadowskcsR，同样是一些设置选项，如果不知道怎么选，直接“回车”使用默认设置：</p>
+<p><img src="https://i.loli.net/2021/08/09/svaIr1gH7Zxiq36.png" alt="ss-all-ssr.png"></p>
+<p>最后，如下图所示，ShadowskcsR安装成功，包括服务器IP、端口、密码、加密方式、obfs、协议、二维码、SSR链接等：</p>
+<p><img src="https://i.loli.net/2021/08/09/9UlZAHocqPvdsNC.png" alt="ss-all-ssr-end.png"></p>
+<h2 id="管理SS-SSR代理"><a href="#管理SS-SSR代理" class="headerlink" title="管理SS/SSR代理"></a>管理SS/SSR代理</h2><p>启动脚本后面的参数含义，从左至右依次为：启动，停止，重启，查看状态。</p>
+<p>Shadowsocks-Python 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-python start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>ShadowsocksR 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-r start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>Shadowsocks-Go 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-go start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>Shadowsocks-libev 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-libev start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>配置文件路径：</p>
+<p>Shadowsocks-Python 版：<br>/etc/shadowsocks-python/config.json</p>
+<p>ShadowsocksR 版：<br>/etc/shadowsocks-r/config.json</p>
+<p>Shadowsocks-Go 版：<br>/etc/shadowsocks-go/config.json</p>
+<p>Shadowsocks-libev 版：<br>/etc/shadowsocks-libev/config.json</p>
+<p>脚本卸载方法（每次卸载一种）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocks-all.sh uninstall</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置SS-SSR客户端"><a href="#配置SS-SSR客户端" class="headerlink" title="配置SS/SSR客户端"></a>配置SS/SSR客户端</h2><p>完成Shadowsocks(R)服务端搭建后，我们就需要在本地客户端配置Shadowsocks(R)了，支持iOS、Android手机、Mac、Windows等，其实就是在客户端上填入上一步的连接信息即可。</p>
+<p>详细教程整理如下。</p>
+<p><strong>1、iOS苹果手机客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">iOS苹果手机客户端使用Shadowsocks教程</a></p>
+<p><strong>2、Android安卓手机客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Android%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Android安卓手机客户端使用Shadowsocks教程</a></p>
+<p><strong>3、Mac客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Mac%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Mac苹果电脑客户端使用Shadowsocks教程</a></p>
+<p><strong>4、Windows客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Windows%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Windows电脑客户端使用Shadowsocks教程</a></p>
+<h2 id="搭建SS-SSR常见问题"><a href="#搭建SS-SSR常见问题" class="headerlink" title="搭建SS/SSR常见问题"></a>搭建SS/SSR常见问题</h2><p>本文介绍的Shadowsocks脚本是四合一，我们<strong>只需要安装一种代理</strong>就可以了，当然也可以4种都装，不会冲突。</p>
+<ol>
+<li>一键安装 Shadowsocks-Python， ShadowsocksR， Shadowsocks-Go， Shadowsocks-libev 版（四选一）服务端；</li>
+<li>各版本的启动脚本及配置文件名不再重合；</li>
+<li>每次运行可安装一种版本；</li>
+<li>支持以多次运行来安装多个版本，且各个版本可以共存（注意端口号需设成不同）；</li>
+<li>若已安装多个版本，则卸载时也需多次运行（每次卸载一种）；</li>
+</ol>
+<p>脚本在使用过程中一般不会出现问题，直接选择下一步就可以了，如果你的系统不支持使用这个脚本，可以尝试更换一个系统，支持CentOS 6+，Debian 7+，Ubuntu 12+。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/" rel="tag"># 搬瓦工翻墙教程</a>
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5shadowsocks/" rel="tag"># 搬瓦工shadowsocks</a>
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5shadowsocksr/" rel="tag"># 搬瓦工shadowsocksr</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/build-v2ray-on-bandwagonhost-vps/" rel="prev" title="搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新）">
+      <i class="fa fa-chevron-left"></i> 搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新）
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0%E6%90%AC%E7%93%A6%E5%B7%A5VPS"><span class="nav-number">1.</span> <span class="nav-text">购买搬瓦工VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%90%AC%E7%93%A6%E5%B7%A5VPS"><span class="nav-number">2.</span> <span class="nav-text">连接搬瓦工VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAShadowsocks%E4%BB%A3%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">搭建Shadowsocks代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAShadowsocksR%E4%BB%A3%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">搭建ShadowsocksR代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86SS-SSR%E4%BB%A3%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">管理SS&#x2F;SSR代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESS-SSR%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">6.</span> <span class="nav-text">配置SS&#x2F;SSR客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BASS-SSR%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">搭建SS&#x2F;SSR常见问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="搬瓦工"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">搬瓦工</p>
+  <div class="site-description" itemprop="description">搬瓦工，搬瓦工中文网，分享搬瓦工教程和搬瓦工优惠码。搬瓦工CN2 GIA、搬瓦工香港、搬瓦工日本、搬瓦工搭建、搬瓦工使用。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">搬瓦工</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+
+<div class="powered-by">由 <a href="https://bwgvps.github.io" class="theme-link" rel="noopener" target="_blank">搬瓦工</a> &amp; <a href="https://github.com/bwgvps/bwgvps.github.io" class="theme-link" rel="noopener" target="_blank">BandwagonHost</a> 强力驱动 <a href="https://bwgvps.github.io/sitemap.xml" rel="noopener nofollow" target="_blank">sitemap</a> <a href="https://bwgvps.github.io/baidusitemap.xml" rel="noopener nofollow" target="_blank">百度sitemap</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>搬瓦工优惠码分享（2021年最新）</title>
+    <url>/bandwagonhost-promotional-code/</url>
+    <content><![CDATA[<p>搬瓦工优惠码（Promotional Code）提供循环优惠，我们在购买搬瓦工VPS时使用搬瓦工优惠码可以获取相应的折扣，本文整理最新的搬瓦工优惠码。</p>
+<p>2021年最新可用搬瓦工优惠码以及循环优惠百分比整理如下：</p>
+<table>
+<thead>
+<tr>
+<th>搬瓦工优惠码</th>
+<th>循环优惠百分比</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BWH3HYATVBJW(<a href="https://linknn.net/bwg">立即使用</a>)</td>
+<td>6.58%</td>
+</tr>
+<tr>
+<td>ireallyreadtheterms8</td>
+<td>5.5%</td>
+</tr>
+<tr>
+<td>ireadtheterms8</td>
+<td>4.4%</td>
+</tr>
+<tr>
+<td>BWH3OGRI2BMH</td>
+<td>5.83%</td>
+</tr>
+<tr>
+<td>BWH3MNP2CG5J</td>
+<td>5.39%</td>
+</tr>
+<tr>
+<td>BWH38ZU9VDKP</td>
+<td>4.8%</td>
+</tr>
+<tr>
+<td>BWH3RWL6HR89</td>
+<td>4.3%</td>
+</tr>
+</tbody></table>
+<p>我们在购买搬瓦工VPS时直接输入上述搬瓦工优惠码即可获得折扣：</p>
+<p><img src="https://i.loli.net/2021/07/15/j9GXqlkFQx1BUKW.png" alt="搬瓦工优惠码.png"></p>
+<p>详细的搬瓦工注册与购买教程可以参考<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</a></p>
+]]></content>
+      <categories>
+        <category>搬瓦工</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工SSH连接信息查看：IP、端口、密码</title>
+    <url>/bandwagonhost-vps-info/</url>
+    <content><![CDATA[<p>在搬瓦工VPS方案购买成功后，VPS的连接信息就会即时发送到你的注册邮箱，但是想要开始使用搬瓦工VPS，需要登陆SSH。对此许多朋友有很多疑惑，比如登录所需要的的IP地址是什么、SSH端口号是什么以及SSH密码怎么获得？所以本文就分享一下搬瓦工连结SSH的具体教程，其中最重要的就是如何进行信息查看，获取登陆所需的信息。</p>
+<h2 id="搬瓦工SSH-IP和端口"><a href="#搬瓦工SSH-IP和端口" class="headerlink" title="搬瓦工SSH IP和端口"></a>搬瓦工SSH IP和端口</h2><p>搬瓦工官网：<a href="https://linknn.net/bwg">点击打开搬瓦工官网</a></p>
+<p>搬瓦工VPS方案已经购买成功的朋友，可以直接进入搬瓦工官网，如下图所示，点击上方的“Client Area”，即可进入搬瓦工 KiwiVM后台；如果还未购买，可参照《<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买</a>》这篇文章，购买搬瓦工VPS方案，购买成功后再进行上述操作。</p>
+<p><img src="https://i.loli.net/2021/07/17/aTkKBX3LRWedjcC.png" alt="搬瓦工的官方网站.png"></p>
+<p>依次点击页面上方“Services”-&gt;“My　Services”，就会出现下图页面，然后点击”KiwiVM　Control　Panel“即可进入控制页面。</p>
+<p><img src="https://i.loli.net/2021/07/17/f3TOIk7xatyPK6r.png" alt="搬瓦工重置密码操作第一步.png"></p>
+<p>在进入搬瓦工 KiwiVM后台后，就能看到以下内容，包括搬瓦工SSH IP、端口和一些基本信息。</p>
+<p><img src="https://i.loli.net/2021/07/17/QKr2IA89qxb4MUn.png" alt="SSH的IP和端口界面.png"></p>
+<h2 id="搬瓦工SSH密码"><a href="#搬瓦工SSH密码" class="headerlink" title="搬瓦工SSH密码"></a>搬瓦工SSH密码</h2><p>搬瓦工的SSH用户名是root，而SSH密码会在你购买套餐/重装系统/重置密码后发至你注册时所填的绑定邮箱里。如果没有收到或忘记密码了，可以通过重置密码的方式获取root密码。</p>
+<p>因为重置密码需要保证VPS开机状态，所以在进行密码重置前我们要格外注意。在搬瓦工实例管理界面，确保VPS状态为”Running“。</p>
+<p><img src="https://i.loli.net/2021/07/17/KmFerTDf4B6xNSv.png" alt="VPS状态 _1_.png"></p>
+<p>之后选择左侧的”Root password modification“，进入搬瓦工的修改root密码栏目，再点击”Generate and set new root password“就可以修改并设置搬瓦工的ROOT密码了。</p>
+<p><img src="https://i.loli.net/2021/07/17/3ec49NhQIWPFVt1.png" alt="搬瓦工重置密码第二步.png"></p>
+]]></content>
+      <categories>
+        <category>搬瓦工</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工VPS搭建Shadowsocks/ShadowsocksR(SS/SSR)代理科学上网翻墙教程（2021年更新）</title>
+    <url>/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/</url>
+    <content><![CDATA[<p>Shadowsocks(SS)以及ShadowsocksR(SSR)是之前用的非常多的代理工具，虽然现在逐渐被<a href="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/">V2Ray</a>取代了，但是还是有不少朋友习惯使用SS/SSR，本文分享如何在搬瓦工VPS上搭建SS/SSR代理。</p>
+<h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
+<p>本站推荐的搬瓦工套餐如下：</p>
+<table>
+<thead>
+<tr>
+<th>套餐</th>
+<th>CPU</th>
+<th>内存</th>
+<th>硬盘</th>
+<th>宽带</th>
+<th>流量/月</th>
+<th>价格</th>
+<th>购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>美国CN2 GT</td>
+<td>1核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>1Gbps</td>
+<td>1TB</td>
+<td>$49.99/年</td>
+<td><a href="https://linknn.net/bwg/57">立即购买</a></td>
+</tr>
+<tr>
+<td>美国CN2 GIA</td>
+<td>2核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>2.5Gbps</td>
+<td>1TB</td>
+<td>$49.99/季度$169.99/年</td>
+<td><a href="https://linknn.net/bwg/87">立即购买</a></td>
+</tr>
+<tr>
+<td>香港CN2 GIA</td>
+<td>2核</td>
+<td>2GB</td>
+<td>40G</td>
+<td>1Gbps</td>
+<td>500GB</td>
+<td>$89.99/月$899.99/年</td>
+<td><a href="https://linknn.net/bwg/95">立即购买</a></td>
+</tr>
+</tbody></table>
+<p>详细的搬瓦工注册与购买教程可以参考<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</a></p>
+<h2 id="连接搬瓦工VPS"><a href="#连接搬瓦工VPS" class="headerlink" title="连接搬瓦工VPS"></a>连接搬瓦工VPS</h2><p>买好搬瓦工VPS后，搬瓦工会将VPS的连接信息发到你的注册邮箱，root密码可以在KiwiVM控制面板查看，详细教程可以参考<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
+<p>找到连接信息后，就是在本地连接搬瓦工VPS了，Windows用户可以使用PuTTY，Mac用户可以使用自带的终端。</p>
+<p><strong>Windows连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png" alt="填写SSH信息.png"></p>
+<p><strong>Mac连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg" alt="Terminal命令.jpg"></p>
+<p>详细图文教程：<a href="https://bwgvps.github.io/connect-bandwagonhost-vps/">本地Windows/Mac连接搬瓦工VPS教程
+</a></p>
+<h2 id="搭建Shadowsocks代理"><a href="#搭建Shadowsocks代理" class="headerlink" title="搭建Shadowsocks代理"></a>搭建Shadowsocks代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
+<p>本文介绍的Shadowsocks脚本是四合一，我们<strong>只需要安装一种代理</strong>就可以了。</p>
+<p>输入下面命令搭建Shadowsocks，一共3个命令，分别表示下载脚本、赋予脚本执行命令和执行脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+<p>如下图所示：</p>
+<p><img src="https://i.loli.net/2021/08/09/jEat4KPFubg7YMw.png" alt="ss-all.png"></p>
+<p>这里如果提示<code>wget: command not found</code>，则先安装curl：</p>
+<ul>
+<li>Ubuntu/Debian系统安装wget方法: <code>apt-get update -y &amp;&amp; apt-get install wget -y</code></li>
+<li>CentOS系统安装wget方法: <code>yum update -y &amp;&amp; yum install wget -y</code></li>
+</ul>
+<p>安装好wget后再依次运行上面的三个命令即可。</p>
+<p>脚本会提示一些选项，包括安装的Shadowsocks版本、端口号、密码等，我们可以自己设置，也可以直接“回车”使用默认设置：</p>
+<p><img src="https://i.loli.net/2021/08/09/UfQg4uqnCXGImy8.png" alt="ss-all-options.png"></p>
+<p>以及Shadowsocks加密方式，也可以直接选择默认的：</p>
+<p><img src="https://i.loli.net/2021/08/09/rOe1h3RDUQnEVsP.png" alt="ss-all-cipher.png"></p>
+<p>最后，按下任意键盘开始安装：</p>
+<p><img src="https://i.loli.net/2021/08/09/S26ekGT1HqsjiXE.png" alt="ss-all-start.png"></p>
+<p>如下图所示，表示Shadowsocks已经安装完毕，包括IP地址、端口、密码、加密方式，以及二维码和SS链接：</p>
+<p><img src="https://i.loli.net/2021/08/09/ZESoj3hY9PFpGvJ.png" alt="ss-all-end.png"></p>
+<h2 id="搭建ShadowsocksR代理"><a href="#搭建ShadowsocksR代理" class="headerlink" title="搭建ShadowsocksR代理"></a>搭建ShadowsocksR代理</h2><p>再说一遍，本文介绍的Shadowsocks脚本是四合一，我们<strong>只需要安装一种代理</strong>就可以了，如果你已经安装上一部分的脚本安装了SS，就不需要安装SSR了。</p>
+<p>同样是在连上搬瓦工VPS后，执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+<p>如下图所示：</p>
+<p><img src="https://i.loli.net/2021/08/09/jEat4KPFubg7YMw.png" alt="ss-all.png"></p>
+<p>这里如果提示<code>wget: command not found</code>，则先安装curl：</p>
+<ul>
+<li>Ubuntu/Debian系统安装wget方法: <code>apt-get update -y &amp;&amp; apt-get install wget -y</code></li>
+<li>CentOS系统安装wget方法: <code>yum update -y &amp;&amp; yum install wget -y</code></li>
+</ul>
+<p>安装好wget后再依次运行上面的三个命令即可。</p>
+<p>这次我们选择ShadowskcsR，同样是一些设置选项，如果不知道怎么选，直接“回车”使用默认设置：</p>
+<p><img src="https://i.loli.net/2021/08/09/svaIr1gH7Zxiq36.png" alt="ss-all-ssr.png"></p>
+<p>最后，如下图所示，ShadowskcsR安装成功，包括服务器IP、端口、密码、加密方式、obfs、协议、二维码、SSR链接等：</p>
+<p><img src="https://i.loli.net/2021/08/09/9UlZAHocqPvdsNC.png" alt="ss-all-ssr-end.png"></p>
+<h2 id="管理SS-SSR代理"><a href="#管理SS-SSR代理" class="headerlink" title="管理SS/SSR代理"></a>管理SS/SSR代理</h2><p>启动脚本后面的参数含义，从左至右依次为：启动，停止，重启，查看状态。</p>
+<p>Shadowsocks-Python 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-python start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>ShadowsocksR 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-r start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>Shadowsocks-Go 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-go start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>Shadowsocks-libev 版：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/init.d/shadowsocks-libev start | stop | restart | status</span><br></pre></td></tr></table></figure>
+
+<p>配置文件路径：</p>
+<p>Shadowsocks-Python 版：<br>/etc/shadowsocks-python/config.json</p>
+<p>ShadowsocksR 版：<br>/etc/shadowsocks-r/config.json</p>
+<p>Shadowsocks-Go 版：<br>/etc/shadowsocks-go/config.json</p>
+<p>Shadowsocks-libev 版：<br>/etc/shadowsocks-libev/config.json</p>
+<p>脚本卸载方法（每次卸载一种）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./shadowsocks-all.sh uninstall</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置SS-SSR客户端"><a href="#配置SS-SSR客户端" class="headerlink" title="配置SS/SSR客户端"></a>配置SS/SSR客户端</h2><p>完成Shadowsocks(R)服务端搭建后，我们就需要在本地客户端配置Shadowsocks(R)了，支持iOS、Android手机、Mac、Windows等，其实就是在客户端上填入上一步的连接信息即可。</p>
+<p>详细教程整理如下。</p>
+<p><strong>1、iOS苹果手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">iOS苹果手机客户端使用Shadowsocks教程</a></p>
+<p><strong>2、Android安卓手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Android%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Android安卓手机客户端使用Shadowsocks教程</a></p>
+<p><strong>3、Mac客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Mac%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Mac苹果电脑客户端使用Shadowsocks教程</a></p>
+<p><strong>4、Windows客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Windows%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Windows电脑客户端使用Shadowsocks教程</a></p>
+<h2 id="搭建SS-SSR常见问题"><a href="#搭建SS-SSR常见问题" class="headerlink" title="搭建SS/SSR常见问题"></a>搭建SS/SSR常见问题</h2><p>本文介绍的Shadowsocks脚本是四合一，我们<strong>只需要安装一种代理</strong>就可以了，当然也可以4种都装，不会冲突。</p>
+<ol>
+<li>一键安装 Shadowsocks-Python， ShadowsocksR， Shadowsocks-Go， Shadowsocks-libev 版（四选一）服务端；</li>
+<li>各版本的启动脚本及配置文件名不再重合；</li>
+<li>每次运行可安装一种版本；</li>
+<li>支持以多次运行来安装多个版本，且各个版本可以共存（注意端口号需设成不同）；</li>
+<li>若已安装多个版本，则卸载时也需多次运行（每次卸载一种）；</li>
+</ol>
+<p>脚本在使用过程中一般不会出现问题，直接选择下一步就可以了，如果你的系统不支持使用这个脚本，可以尝试更换一个系统，支持CentOS 6+，Debian 7+，Ubuntu 12+。</p>
+]]></content>
+      <categories>
+        <category>搬瓦工</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工翻墙教程</tag>
+        <tag>搬瓦工shadowsocks</tag>
+        <tag>搬瓦工shadowsocksr</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新）</title>
+    <url>/build-v2ray-on-bandwagonhost-vps/</url>
+    <content><![CDATA[<p>大部分国内用户购买搬瓦工VPS都是用于翻墙的，但是很多朋友在买了搬瓦工VPS并不知道如何搭建代理，今天就以目前最火也是最稳的代理方式V2Ray为例，从零开始介绍搬瓦工VPS如何搭建V2Ray代理实现科学上网翻墙。</p>
+<h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
+<p>本站推荐的搬瓦工套餐如下：</p>
+<table>
+<thead>
+<tr>
+<th>套餐</th>
+<th>CPU</th>
+<th>内存</th>
+<th>硬盘</th>
+<th>宽带</th>
+<th>流量/月</th>
+<th>价格</th>
+<th>购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>美国CN2 GT</td>
+<td>1核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>1Gbps</td>
+<td>1TB</td>
+<td>$49.99/年</td>
+<td><a href="https://linknn.net/bwg/57">立即购买</a></td>
+</tr>
+<tr>
+<td>美国CN2 GIA</td>
+<td>2核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>2.5Gbps</td>
+<td>1TB</td>
+<td>$49.99/季度$169.99/年</td>
+<td><a href="https://linknn.net/bwg/87">立即购买</a></td>
+</tr>
+<tr>
+<td>香港CN2 GIA</td>
+<td>2核</td>
+<td>2GB</td>
+<td>40G</td>
+<td>1Gbps</td>
+<td>500GB</td>
+<td>$89.99/月$899.99/年</td>
+<td><a href="https://linknn.net/bwg/95">立即购买</a></td>
+</tr>
+</tbody></table>
+<p>详细的搬瓦工注册与购买教程可以参考<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</a></p>
+<h2 id="连接搬瓦工VPS"><a href="#连接搬瓦工VPS" class="headerlink" title="连接搬瓦工VPS"></a>连接搬瓦工VPS</h2><p>买好搬瓦工VPS后，搬瓦工会将VPS的连接信息发到你的注册邮箱，root密码可以在KiwiVM控制面板查看，详细教程可以参考<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
+<p>找到连接信息后，就是在本地连接搬瓦工VPS了，Windows用户可以使用PuTTY，Mac用户可以使用自带的终端。</p>
+<p><strong>Windows连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png" alt="填写SSH信息.png"></p>
+<p><strong>Mac连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg" alt="Terminal命令.jpg"></p>
+<p>详细图文教程：<a href="https://bwgvps.github.io/connect-bandwagonhost-vps/">本地Windows/Mac连接搬瓦工VPS教程
+</a></p>
+<h2 id="搭建V2Ray代理"><a href="#搭建V2Ray代理" class="headerlink" title="搭建V2Ray代理"></a>搭建V2Ray代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
+<p>输入下面命令安装V2Ray：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/bwg_v2ray)</span><br></pre></td></tr></table></figure>
+<p>这里如果提示<code>curl: command not found</code>，则先安装curl：</p>
+<ul>
+<li>Ubuntu/Debian系统安装curl方法: <code>apt-get update -y &amp;&amp; apt-get install curl -y</code></li>
+<li>CentOS系统安装curl方法: <code>yum update -y &amp;&amp; yum install curl -y</code></li>
+</ul>
+<p>安装好curl后再次运行<code>bash &lt;(curl -s -L https://git.io/bwg_v2ray)</code>即可。</p>
+<p>第一步是提示安装还是卸载，自然是开始安装，输入1即可开始安装：</p>
+<p><img src="https://i.loli.net/2021/08/05/LOAWaQhzGoDNBnY.png" alt="v2ray-install.png"></p>
+<p>之后是选择V2Ray传输协议，很多种，包括TCP、WebSocket等，如果你不知道怎么选就直接回车选择默认的TCP即可：</p>
+<p><img src="https://i.loli.net/2021/08/05/gkBQqrY1lG5ZD9a.png" alt="v2ray-protocol-option.png"></p>
+<p>接下来就是一些其他设置，如V2Ray端口、是否开启广告拦截、是否配置Shadowsocks等，一样的，如果你不知道怎么选就直接回车选择默认的即可：</p>
+<p><img src="https://i.loli.net/2021/08/05/F3vdb9pfMUgytwH.png" alt="v2ray-other-options.png"></p>
+<p>选完配置后，就到了最后一步，确认无误后按下回车键开始安装V2Ray：</p>
+<p><img src="https://i.loli.net/2021/08/05/sihXO562mdDuFfR.png" alt="v2ray-install-start.png"></p>
+<p>最后，如下图所示，就表示你的搬瓦工VPS成功安装V2Ray了，页面上显示的是你V2Ray的连接信息：</p>
+<p><img src="https://i.loli.net/2021/08/05/KV9tenqiwbPG7Ak.png" alt="v2ray-install-end.png"></p>
+<p>配置文件路径：</p>
+<ul>
+<li>V2Ray 配置文件路径：/etc/v2ray/config.json</li>
+<li>Caddy 配置文件路径：/etc/caddy/Caddyfile</li>
+<li>脚本配置文件路径: /etc/v2ray/233blog_v2ray_backup.conf</li>
+</ul>
+<h2 id="管理V2Ray代理"><a href="#管理V2Ray代理" class="headerlink" title="管理V2Ray代理"></a>管理V2Ray代理</h2><p>成功安装V2Ray后，我们直接输入<code>v2ray</code>即可打开管理页面，如下图：</p>
+<p><img src="https://i.loli.net/2021/08/05/2W4vXpLy8mfUNYA.png" alt="v2ray-manage.png"></p>
+<p>常见的管理命令如下：</p>
+<ul>
+<li><code>v2ray info</code> 查看 V2Ray 配置信息</li>
+<li><code>v2ray config</code> 修改 V2Ray 配置</li>
+<li><code>v2ray link</code> 生成 V2Ray 配置文件链接</li>
+<li><code>v2ray infolink</code> 生成 V2Ray 配置信息链接</li>
+<li><code>v2ray qr</code> 生成 V2Ray 配置二维码链接</li>
+<li><code>v2ray ss</code> 修改 Shadowsocks 配置</li>
+<li><code>v2ray ssinfo</code> 查看 Shadowsocks 配置信息</li>
+<li><code>v2ray ssqr</code> 生成 Shadowsocks 配置二维码链接</li>
+<li><code>v2ray status</code> 查看 V2Ray 运行状态</li>
+<li><code>v2ray start</code> 启动 V2Ray</li>
+<li><code>v2ray stop</code> 停止 V2Ray</li>
+<li><code>v2ray restart</code> 重启 V2Ray</li>
+<li><code>v2ray log</code> 查看 V2Ray 运行日志</li>
+<li><code>v2ray update</code> 更新 V2Ray</li>
+<li><code>v2ray update.sh</code> 更新 V2Ray 管理脚本</li>
+<li><code>v2ray uninstall</code> 卸载 V2Ray</li>
+</ul>
+<h2 id="配置V2Ray客户端"><a href="#配置V2Ray客户端" class="headerlink" title="配置V2Ray客户端"></a>配置V2Ray客户端</h2><p>完成V2Ray服务端搭建后，我们就需要在本地客户端配置V2Ray了，支持iOS、Android手机、Mac、Windows等，其实就是在客户端上填入上一步的连接信息即可。</p>
+<p>详细教程整理如下。</p>
+<p><strong>1、iOS苹果手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFShadowrocket%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">iOS苹果手机客户端Shadowrocket下载方法与使用教程</a></p>
+<p><strong>2、Android安卓手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayNG%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">安卓手机客户端v2rayNG下载方法与使用教程</a></p>
+<p><strong>3、Mac客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/Mac%E5%AE%A2%E6%88%B7%E7%AB%AFV2RayX%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Mac客户端V2RayX下载方法与使用教程</a></p>
+<p><strong>4、Windows客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/Windows%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayN%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Windows客户端v2rayN下载方法与使用教程</a></p>
+<h2 id="搭建V2Ray常见问题"><a href="#搭建V2Ray常见问题" class="headerlink" title="搭建V2Ray常见问题"></a>搭建V2Ray常见问题</h2><p>这个V2Ray一键脚本支持：</p>
+<ol>
+<li>支持 V2Ray 多数传输协议</li>
+<li>支持 WebSocket + TLS / HTTP/2</li>
+<li>支持 动态端口 (WebSocket + TLS，Socks5， HTTP/2 除外)</li>
+<li>支持 屏蔽广告</li>
+<li>支持 配置 Shadowsocks</li>
+<li>支持 下载客户端配置文件 (不用 Xshell 也可以下载)</li>
+<li>客户端配置文件同时支持 SOCKS 和 HTTP</li>
+<li>支持 生成 V2Ray 配置二维码链接 (仅适用部分客户端)</li>
+<li>支持 生成 V2Ray 配置信息链接</li>
+<li>支持 生成 Shadowsocks 配置二维码链接</li>
+<li>支持修改 V2Ray 传输协议</li>
+<li>支持修改 V2Ray 端口</li>
+<li>支持修改 动态端口</li>
+<li>支持修改 用户ID</li>
+<li>支持修改 TLS 域名</li>
+<li>支持修改 Shadowsocks 端口</li>
+<li>支持修改 Shadowsocks 密码</li>
+<li>支持修改 Shadowsocks 加密协议</li>
+<li>自动启用 BBR 优化 (如果内核支持)</li>
+<li>集成可选安装 BBR (by teddysun.com)</li>
+<li>集成可选安装 锐速 (by moeclub.org)</li>
+<li>一键 查看运行状态 / 查看配置信息 / 启动 / 停止 / 重启 / 更新 / 卸载 / 等等…</li>
+<li>人性化向导 &amp; 纯净安装 &amp; 卸载彻底</li>
+</ol>
+<p>在使用过程中一般不会出现问题，直接选择下一步就可以了，如果你的系统不支持使用这个脚本，可以尝试更换一个系统，支持Ubuntu 16+ / Debian 8+ / CentOS 7+，推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化。</p>
+]]></content>
+      <categories>
+        <category>搬瓦工</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工翻墙教程</tag>
+        <tag>搬瓦工v2ray</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本地Windows/Mac连接搬瓦工VPS教程</title>
+    <url>/connect-bandwagonhost-vps/</url>
+    <content><![CDATA[<p>获得信息后，大家会都迫切的去进行本地连接，但是呢实际操作又会出现一些障碍，所以本文就Windows系统和Mac系统如何进行搬瓦工 VPS本地连接，做了一份详细的教程，希望能对大家的操作有帮助。</p>
+<p>如果你还不知道搬瓦工VPS的连接信息是什么，相信这篇教程可以帮到你：<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
+<h2 id="Windows连接教程"><a href="#Windows连接教程" class="headerlink" title="Windows连接教程"></a>Windows连接教程</h2><p>要注意的是，Windows需要远程桌面的话需要借助PuTTY工具，这是一个口碑不错并且免费的SSH工具。</p>
+<p>第一步我们需要根据自己所用电脑的系统（32位还是64位）下载并安装好PuTTY工具。</p>
+<p>这里给大家给分享一下PuTTY官方下载地址：<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a></p>
+<p><img src="https://i.loli.net/2021/07/19/vpik3ReQucjNSw2.png" alt="下载PuTTY.png"></p>
+<p>随后打开PuTTY，会弹出填写信息的界面，如下图所示。在图中所标的位置进行如实填写SSH IP和端口，接着选择SSH连接类型、设置连接会话名称，点击“Save”进行保存，最后点击“Open”键开始连接登录：</p>
+<p><img src="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png" alt="填写SSH信息.png"></p>
+<p>如果是第一次使用PuTTY连接这台搬瓦工VPS，PuTTY会提示保存服务器指纹，直接点击“Accept”即可，保存后之后连接就不会再提示了：</p>
+<p><img src="https://i.loli.net/2021/07/19/fV8IWNSjOLhBP3H.png" alt="接受SSH.png"></p>
+<p>最后在随后出现的页面中输入用户名“root”、密码，如下图，就表明已经成功使用PuTTY连接上搬瓦工VPS了：</p>
+<p><img src="https://i.loli.net/2021/07/19/R3Ho5fWlFM2JOr9.jpg" alt="搬瓦工连接成功.png"></p>
+<h2 id="Mac连接教程"><a href="#Mac连接教程" class="headerlink" title="Mac连接教程"></a>Mac连接教程</h2><p>和Windows系统的连接方法相比，Mac实在是要方便的多，因为Mac可以直接使用自带的终端Terminal实现本地连接，不需要借助第三方软件：</p>
+<p><img src="https://i.loli.net/2021/07/19/QhCZWRJxg45Br13.png" alt="Mac自带Terminal.png"></p>
+<p>首先打开终端，输入ssh root@IP地址 -p ssh端口，记得把当中IP地址和SSH端口换成你自己VPS的信息：</p>
+<p><img src="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg" alt="Terminal命令.jpg"></p>
+<p>一样的是，如果是第一次连接，就需要保存VPS的签名密钥，输入“yes”保存即可。之后是输入SSH密码（此时不会显示），输入完毕后直接回车即可，只要信息填写都正确，就会出现连接成功的标志了。</p>
+]]></content>
+      <categories>
+        <category>搬瓦工</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理</title>
+    <url>/justmysocks-tutorial/</url>
+    <content><![CDATA[<p>Just My Socks怎么用？之前已经介绍了<a href="https://bwgvps.github.io/purchase-justmysocks/">搬瓦工机场Just My Socks注册与购买教程</a>，那么买了后怎么连接Just My Socks呢？带着这些疑问，本文分享Just My Socks使用教程，包括连接信息查看、本地使用方法，以及常见的后台教程。</p>
+<h2 id="Just-My-Socks连接信息查看"><a href="#Just-My-Socks连接信息查看" class="headerlink" title="Just My Socks连接信息查看"></a>Just My Socks连接信息查看</h2><p>如果你还没有购买，则可以参考<a href="https://bwgvps.github.io/purchase-justmysocks/">搬瓦工机场Just My Socks注册与购买教程</a>先去注册一个账号，Just My Socks支持7天无理由退款，所以大家可以放心购买。</p>
+<p>Just My Socks官网：<a href="https://linknn.net/jms">justmysocks3.net</a></p>
+<p>打开官网，登陆自己的账号：</p>
+<p><img src="https://i.loli.net/2021/07/20/eEKzkuQwmVl6v5b.png" alt="Just My Socks login.png"></p>
+<p>在登陆页面输入用户名和密码，以及验证码：</p>
+<p><img src="https://i.loli.net/2021/07/20/ZSlK8mzWqAJgGNB.png" alt="Just My Socks login-info.png"></p>
+<p>成功登陆Just My Socks后，在Services-&gt;My Services下我们可以看到Just My Socks服务列表，点击刚才购买的服务：</p>
+<p><img src="https://i.loli.net/2021/07/20/m9JwfrQi54G2qL8.png" alt="just my socks-my-services.png"></p>
+<p>这里就是Just My Socks服务详情页面了，第一部分就是服务的基本信息，我们需要关注的包括账单金额、续费时间、已用流量以及流量重置日期：</p>
+<p><img src="https://i.loli.net/2021/07/20/6GY7eAtEXFwmHLh.png" alt="just my socks service details.png"></p>
+<p>这一部分是连接信息，包括加密、端口、密码、UUID、AlterID等，第一部分是Shadowsocks的信息，第二部分是V2Ray的信息：</p>
+<p><img src="https://i.loli.net/2021/07/20/13fBwgd2plPQ8e4.png" alt="just my socks service details-2.png"></p>
+<p>以及服务器地址，为了方便更换IP地址，Just My Socks默认是提供域名作为服务器地址的：</p>
+<p><img src="https://i.loli.net/2021/07/20/7GpF4C6RbSAri8x.png" alt="just my socks service details-3.png"></p>
+<p>一些客户端可能不支持域名解析，下面也有每个域名对应的IP，不过如果使用IP代替域名，那么你就需要时常上来看看IP地址是否更换了，因为IP被封后，Just My Socks是会自动更换IP的：</p>
+<p><img src="https://i.loli.net/2021/07/20/l13ni6NaRStMW2Q.png" alt="just my socks service details-4.png"></p>
+<p>如果你本地支持扫描二维码导入配置，也可以直接扫描二维码：</p>
+<p><img src="https://i.loli.net/2021/07/20/AsKTfhSWU2NJpZw.png" alt="just my socks qr code.png"></p>
+<p>另外，Just My Socks提供订阅功能，所以建议使用订阅链接方式来添加配置，这样不仅仅省时省力，并且不会出现输入错误信息的情况。</p>
+<p>你可以在后台看到“订阅链接”，如下图位置所示：</p>
+<p><img src="https://i.loli.net/2021/07/20/nofEFZpduJtwiHj.png" alt="just my socks subscription link.png"></p>
+<p>将“订阅链接”复制，再在相关软件上配置订阅相关选项即可。之后更新订阅，就能获取全部配置信息了。</p>
+<p>默认的 订阅链接 是使用 IP 作为服务器地址，建议在 订阅链接 的后面加上 &amp;usedomains=1<br>这样来就是使用 Just My Socks 的域名作为服务器地址了，使用域名可以时刻保持为最新可用的 IP。</p>
+<p>如果你不想同时订阅 V2RAY 和 Shadowsocks：</p>
+<ul>
+<li><p>排除订阅 Shadowsocks 的配置，请在 订阅链接 后面加上 &amp;noss=1</p>
+</li>
+<li><p>排除订阅 V2RAY 的配置，请在 订阅链接 后面加上 &amp;novmess=1</p>
+</li>
+</ul>
+<p>目前常见的上网软件都支持使用订阅的，比如说 v2rayN 和 v2rayNG 等。</p>
+<h2 id="Just-My-Socks本地使用"><a href="#Just-My-Socks本地使用" class="headerlink" title="Just My Socks本地使用"></a>Just My Socks本地使用</h2><p>Just My Socks支持电脑和手机客户端，我们只需要下载对应的软件，导入配置即可，可以按照上一部分的教程手动输入连接信息，也可以直接使用订阅链接将所有配置都导入到客户端中。</p>
+<p>Just My Socks官方提供客户端下载地址以及每种客户端的使用方法，包括Android、iOS/iPhone、Mac、Windows等。具体位置在Support-&gt;Knowledgebase，如下图所示：</p>
+<p><img src="https://i.loli.net/2021/07/20/mtR2DPJVxszQ8L1.png" alt="just my socks knowledgebase.png"></p>
+<h2 id="Just-My-Socks常见问题"><a href="#Just-My-Socks常见问题" class="headerlink" title="Just My Socks常见问题"></a>Just My Socks常见问题</h2><p>一些在使用Just My Socks时可能有的疑问整理如下。</p>
+<p><strong>1、哪组服务器最快？</strong></p>
+<p>如果你使用电信宽带，推荐优先使用第三组服务器，这个线路速度对电信是最好的</p>
+<p>第四组服务器对移动和联通线路优化比较好，适合使用移动上网的小伙伴</p>
+<p>第五组是三网CN2 GIA线路，移动、电信、联通都可以使用。</p>
+<p><strong>2、Just My Socks新手教程有哪些？</strong></p>
+<p>Just My Socks常用的功能在后台都有入口，这里将后台界面的一些重要的选项及给详细标注出来了，见下图</p>
+<p><img src="https://i.loli.net/2021/07/20/mncKjBIzpO62Tks.png" alt="just my socks faq.png"></p>
+<p>先从左边挑几个重点的说。</p>
+<p>1，更改账单周期</p>
+<p>这个东西是更改套餐的续费周期的，推荐使用 年付 (Annually) 账单周期，因为这样可以更加省钱。</p>
+<p>2，更改密码</p>
+<p>更改密码会同时更改 shadowsocks 的密码 和 v2ray 的 uuid，并且由于 justmysocks 是使用 v2ray 的 uuid 来标识订阅链接的，还有流量 API 的链接，所以如果更改了密码，你要使用新的订阅链接和流量 API 链接。</p>
+<p>3，更改端口</p>
+<p>更改端口2会同时更改 shadowsocks 的端口 和 v2ray 的 端口。</p>
+<p>4，升级或降级</p>
+<p>如果你觉得现有的套餐不能满足你的需求，那么你可以升级到更多流量的套餐。</p>
+<p>好，现在说一下右边的一些使用状态提示。</p>
+<p>1，续费日期</p>
+<p>千万不要忘记续费，要不然你的服务会被停止，特别是有老套餐的，如果忘记续费，那么你的传家宝套餐就没了。</p>
+<p>2，流量使用状态</p>
+<p>你可以看到当前使用了多少 G 的流量，如果流量用完了，此处会显示红色的。</p>
+<p>3，流量重置日期</p>
+<p>Just My Socks流量是按月计算的，这是每月流量重置的日期，以美国洛杉矶时间为准。</p>
+]]></content>
+      <categories>
+        <category>Just My Socks</category>
+      </categories>
+      <tags>
+        <tag>Just My Socks新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</title>
+    <url>/purchase-bandwagonhost/</url>
+    <content><![CDATA[<p>由于搬瓦工官网是全英文，所以一些英文不好的朋友们，在选择、注册和购买搬瓦工VPS方案时会有这样或那样的疑惑。比如搬瓦工VPS方案选择哪种？搬瓦工怎么注册？搬瓦工最新优惠码是什么？搬瓦工怎么支付？面对这些种种疑惑，本文就为大家整理了详细的搬瓦工新用户注册和购买教程，这样顾客朋友们就可以自己简单快捷的进行操作了。</p>
+<h2 id="搬瓦工VPS方案选择"><a href="#搬瓦工VPS方案选择" class="headerlink" title="搬瓦工VPS方案选择"></a>搬瓦工VPS方案选择</h2><p>搬瓦工有很多方案可供选择，我们在购买搬瓦工VPS前第一件事就是要确定我们最需要的是哪一款搬瓦工方案。</p>
+<p>一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
+<p>本站推荐的搬瓦工套餐如下：</p>
+<table>
+<thead>
+<tr>
+<th>套餐</th>
+<th>CPU</th>
+<th>内存</th>
+<th>硬盘</th>
+<th>宽带</th>
+<th>流量/月</th>
+<th>价格</th>
+<th>购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>美国CN2 GT</td>
+<td>1核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>1Gbps</td>
+<td>1TB</td>
+<td>$49.99/年</td>
+<td><a href="https://linknn.net/bwg/57">立即购买</a></td>
+</tr>
+<tr>
+<td>美国CN2 GIA</td>
+<td>2核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>2.5Gbps</td>
+<td>1TB</td>
+<td>$49.99/季度$169.99/年</td>
+<td><a href="https://linknn.net/bwg/87">立即购买</a></td>
+</tr>
+<tr>
+<td>香港CN2 GIA</td>
+<td>2核</td>
+<td>2GB</td>
+<td>40G</td>
+<td>1Gbps</td>
+<td>500GB</td>
+<td>$89.99/月$899.99/年</td>
+<td><a href="https://linknn.net/bwg/95">立即购买</a></td>
+</tr>
+</tbody></table>
+<p>上表中主要是整理了几款便宜套餐，更多搬瓦工套餐可以去搬瓦工官网查看：<a href="https://linknn.net/bwg/all">搬瓦工官网套餐汇总</a></p>
+<h2 id="搬瓦工VPS购买"><a href="#搬瓦工VPS购买" class="headerlink" title="搬瓦工VPS购买"></a>搬瓦工VPS购买</h2><p>先选择想要的方案，点击方案后方的”立即购买”即可直接进入搬瓦工具体方案的购买页面。首先进入到是搬瓦工信息介绍页面，包括VPS基本信息（配置、带宽、流量等），如下图所示：</p>
+<p><img src="https://i.loli.net/2021/07/15/MYF9rGlbAyonc6R.png" alt="搬瓦工VPS信息.png"></p>
+<p>这里是付款周期和机房位置，确认无误后点击“Add to Cart”进入下一步：</p>
+<p><img src="https://i.loli.net/2021/07/15/74UTv65MetGcWxJ.png" alt="搬瓦工VPS机房位置.png"></p>
+<h2 id="搬瓦工最新优惠码"><a href="#搬瓦工最新优惠码" class="headerlink" title="搬瓦工最新优惠码"></a>搬瓦工最新优惠码</h2><p>这里可以使用优惠码获得折扣，搬瓦工最新的优惠码是BWH3HYATVBJW，根据图示，填入优惠码，先点击“Validate Code”，再点击”Check Out”就可以看到使用完优惠码后的价格：</p>
+<p><img src="https://i.loli.net/2021/07/15/j9GXqlkFQx1BUKW.png" alt="搬瓦工优惠码.png"></p>
+<h2 id="搬瓦工账户注册"><a href="#搬瓦工账户注册" class="headerlink" title="搬瓦工账户注册"></a>搬瓦工账户注册</h2><p>首次注册的用户需要如实填写个人信息，根据下列图文要求，填写姓名，邮箱，账户密码，地址等等，注意注册信息要如实填写，例如中国用户在注册时国家（Country）必须是China（中国） ，否则可能会被认为是Fraud（欺诈）而取消订单。</p>
+<p><img src="https://i.loli.net/2021/07/15/fnZgPAGvBxtip4F.png" alt="搬瓦工账号信息.png"></p>
+<h2 id="搬瓦工支付"><a href="#搬瓦工支付" class="headerlink" title="搬瓦工支付"></a>搬瓦工支付</h2><p>最后就是搬瓦工支付页面，搬瓦工支持支付宝、信用卡和PayPal支付，选择“Alipay”（支付宝）为支付方式，然后在”I have read and….”处打勾，最后点击”Complete Order”：</p>
+<p><img src="https://i.loli.net/2021/07/15/yZiI2qc3OjQY9Rn.png" alt="搬瓦工支付.png"></p>
+<p>最后用支付宝扫码完成支付，也就完成了搬瓦工VPS方案的购买。</p>
+]]></content>
+      <categories>
+        <category>搬瓦工</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工机场Just My Socks注册与购买教程</title>
+    <url>/purchase-justmysocks/</url>
+    <content><![CDATA[<p>Just My Socks是搬瓦工官方机场，提供Shadowsocks和V2ray服务。Just My Socks方案总能基本满足大家对流量的要求，但是在进行注册和购买时又会存在一些小问题，使大家困扰不已。所以今天本文就对注册与购买作出了详细的整理，希望可以帮到大家，让大家的操作更加流畅。</p>
+<h2 id="Just-My-Socks方案整理"><a href="#Just-My-Socks方案整理" class="headerlink" title="Just My Socks方案整理"></a>Just My Socks方案整理</h2><p>Just My Socks官网：<a href="https://linknn.net/jms">justmysocks3.net</a></p>
+<p>下面是现阶段整理出的Just My Socks的一些方案：</p>
+<table>
+<thead>
+<tr>
+<th>方案名称</th>
+<th>带宽</th>
+<th>流量</th>
+<th>价格</th>
+<th>设备限制</th>
+<th>购买链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Just My Socks IPLC HK 100</td>
+<td>100Mbps</td>
+<td>100 GB / 月</td>
+<td>$21 / 月</td>
+<td>最多 3 个设备同时在线</td>
+<td><a href="https://linknn.net/jms/9">立即购买</a></td>
+</tr>
+<tr>
+<td>Just My Socks Hong Kong 100</td>
+<td>100Mbps</td>
+<td>100 GB /月</td>
+<td>$34.99 / 月</td>
+<td>最多 3 个设备同时在线</td>
+<td><a href="https://linknn.net/jms/7">立即购买</a></td>
+</tr>
+<tr>
+<td>Just My Socks Hong Kong 500</td>
+<td>500Mbps</td>
+<td>500 GB / 月</td>
+<td>$149.99 / 月</td>
+<td>最多 5 个设备同时在线</td>
+<td><a href="https://linknn.net/jms/8">立即购买</a></td>
+</tr>
+<tr>
+<td>Just My Socks Tokyo 100</td>
+<td>100Mbps</td>
+<td>100 GB /月</td>
+<td>$29.99 / 月</td>
+<td>最多 3 个设备同时在线</td>
+<td><a href="https://linknn.net/jms/5">立即购买</a></td>
+</tr>
+<tr>
+<td>Just My Socks Tokyo 500</td>
+<td>200Mbps</td>
+<td>500 GB / 月</td>
+<td>$135.99/月</td>
+<td>最多 5 个设备同时在线</td>
+<td><a href="https://linknn.net/jms/6">立即购买</a></td>
+</tr>
+<tr>
+<td>Just My Socks LA 500</td>
+<td>2.5 GB</td>
+<td>500 GB / 月</td>
+<td>$5.88 / 月</td>
+<td>最多 5 个设备同时在线</td>
+<td><a href="https://linknn.net/jms/2">立即购买</a></td>
+</tr>
+<tr>
+<td>Just My Socks LA 1000</td>
+<td>5 GB</td>
+<td>1TB / 月</td>
+<td>$9.88 / 月</td>
+<td>不限制设备数量</td>
+<td><a href="https://linknn.net/jms/3">立即购买</a></td>
+</tr>
+<tr>
+<td>Just My Socks LA 5000</td>
+<td>5 GB</td>
+<td>5TB / 月</td>
+<td>$48.99 / 月</td>
+<td>不限制设备数量</td>
+<td><a href="https://linknn.net/jms/4">立即购买</a></td>
+</tr>
+</tbody></table>
+<h2 id="Just-My-Socks方案购买"><a href="#Just-My-Socks方案购买" class="headerlink" title="Just My Socks方案购买"></a>Just My Socks方案购买</h2><p>点击”立即购买“，就会出现如下全英文页面；当然如果有需要也可以切换成中文模式，只需选中页面右上方“English”，选择当中的“中文”选项，即可切换成功:</p>
+<p><img src="https://i.loli.net/2021/07/20/mM68IAY5ncslZfX.png" alt="开始页面.png"></p>
+<p>注意页面中有Just My Socks的配置信息是否正确，也要注意的是付款周期，我们更推荐年付，因为对于使用者来说这样只需要支付10个月的费用而可以使用一年，性价比更高。两项信息确认完毕就可以 点击”Continue“选项:</p>
+<p><img src="https://i.loli.net/2021/07/20/vAzxS67dYVrguKU.png" alt="配置。png.png"></p>
+<h2 id="Just-My-Socks优惠码的使用"><a href="#Just-My-Socks优惠码的使用" class="headerlink" title="Just My Socks优惠码的使用"></a>Just My Socks优惠码的使用</h2><p>再下图已框选的地方，直接输入Just My Socks优惠码：JMS9272283 ，就可以优惠5.2%（该优惠属于终身优惠，续费之后也可以享用）。之后点击 ”Checkout “就可以获得优惠后的价格：</p>
+<p><img src="https://i.loli.net/2021/07/20/lh6uXYyMmvaU4fF.png" alt="优惠码使用.png"></p>
+<h2 id="Just-My-Socks信息注册"><a href="#Just-My-Socks信息注册" class="headerlink" title="Just My Socks信息注册"></a>Just My Socks信息注册</h2><p>按照下图所示，先填写信息，主要包括邮箱、地址以及密码，手机可以随便填写，要特别注意国家选择“China”。随后选择支付方式，我们推荐使用支付宝支付。接着勾选“Ｉhave read….”,再点击”Complete order“即可：</p>
+<p><img src="https://i.loli.net/2021/07/20/rTy5L2dzeXNlW6Q.png" alt="注册须知.png"></p>
+<p>最后就是用支付宝扫描二维码完成付款，就可以完成整个Just My Socks注册与购买流程了。</p>
+<p>如果你不知道如何使用Just My Socks，这篇教程可以帮到你：<a href="https://bwgvps.github.io/justmysocks-tutorial/">搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理</a></p>
+]]></content>
+      <categories>
+        <category>Just My Socks</category>
+      </categories>
+      <tags>
+        <tag>Just My Socks新手教程</tag>
+      </tags>
+  </entry>
+</search>

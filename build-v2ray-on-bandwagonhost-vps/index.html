@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/avatar.gif" color="#222">
+  <meta name="google-site-verification" content="I0AdiK9ghFbhDtTfcIea3jMWVbELLTjqS9UbQTSKrgE">
+  <meta name="baidu-site-verification" content="code-eb03mxvDmN">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bwgvps.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="本文介绍如何在搬瓦工VPS上搭建安装V2Ray代理实现科学上网翻墙，包括服务器搭建和客户端配置。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新）">
+<meta property="og:url" content="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/index.html">
+<meta property="og:site_name" content="搬瓦工">
+<meta property="og:description" content="本文介绍如何在搬瓦工VPS上搭建安装V2Ray代理实现科学上网翻墙，包括服务器搭建和客户端配置。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/08/05/LOAWaQhzGoDNBnY.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/05/gkBQqrY1lG5ZD9a.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/05/F3vdb9pfMUgytwH.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/05/sihXO562mdDuFfR.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/05/KV9tenqiwbPG7Ak.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/05/2W4vXpLy8mfUNYA.png">
+<meta property="article:published_time" content="2021-08-05T07:20:09.000Z">
+<meta property="article:modified_time" content="2021-08-09T06:22:12.192Z">
+<meta property="article:author" content="搬瓦工">
+<meta property="article:tag" content="搬瓦工翻墙教程">
+<meta property="article:tag" content="搬瓦工v2ray">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png">
+
+<link rel="canonical" href="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新） | 搬瓦工</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">搬瓦工</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">搬瓦工中文网，搬瓦工VPS，BandwagonHost</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="搬瓦工">
+      <meta itemprop="description" content="搬瓦工，搬瓦工中文网，分享搬瓦工教程和搬瓦工优惠码。搬瓦工CN2 GIA、搬瓦工香港、搬瓦工日本、搬瓦工搭建、搬瓦工使用。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="搬瓦工">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-05 15:20:09" itemprop="dateCreated datePublished" datetime="2021-08-05T15:20:09+08:00">2021-08-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-09 14:22:12" itemprop="dateModified" datetime="2021-08-09T14:22:12+08:00">2021-08-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BandwagonHost/" itemprop="url" rel="index"><span itemprop="name">搬瓦工</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>大部分国内用户购买搬瓦工VPS都是用于翻墙的，但是很多朋友在买了搬瓦工VPS并不知道如何搭建代理，今天就以目前最火也是最稳的代理方式V2Ray为例，从零开始介绍搬瓦工VPS如何搭建V2Ray代理实现科学上网翻墙。</p>
+<h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
+<p>本站推荐的搬瓦工套餐如下：</p>
+<table>
+<thead>
+<tr>
+<th>套餐</th>
+<th>CPU</th>
+<th>内存</th>
+<th>硬盘</th>
+<th>宽带</th>
+<th>流量/月</th>
+<th>价格</th>
+<th>购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>美国CN2 GT</td>
+<td>1核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>1Gbps</td>
+<td>1TB</td>
+<td>$49.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/57">立即购买</a></td>
+</tr>
+<tr>
+<td>美国CN2 GIA</td>
+<td>2核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>2.5Gbps</td>
+<td>1TB</td>
+<td>$49.99/季度$169.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/87">立即购买</a></td>
+</tr>
+<tr>
+<td>香港CN2 GIA</td>
+<td>2核</td>
+<td>2GB</td>
+<td>40G</td>
+<td>1Gbps</td>
+<td>500GB</td>
+<td>$89.99/月$899.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/95">立即购买</a></td>
+</tr>
+</tbody></table>
+<p>详细的搬瓦工注册与购买教程可以参考<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</a></p>
+<h2 id="连接搬瓦工VPS"><a href="#连接搬瓦工VPS" class="headerlink" title="连接搬瓦工VPS"></a>连接搬瓦工VPS</h2><p>买好搬瓦工VPS后，搬瓦工会将VPS的连接信息发到你的注册邮箱，root密码可以在KiwiVM控制面板查看，详细教程可以参考<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
+<p>找到连接信息后，就是在本地连接搬瓦工VPS了，Windows用户可以使用PuTTY，Mac用户可以使用自带的终端。</p>
+<p><strong>Windows连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png" alt="填写SSH信息.png"></p>
+<p><strong>Mac连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg" alt="Terminal命令.jpg"></p>
+<p>详细图文教程：<a href="https://bwgvps.github.io/connect-bandwagonhost-vps/">本地Windows/Mac连接搬瓦工VPS教程
+</a></p>
+<h2 id="搭建V2Ray代理"><a href="#搭建V2Ray代理" class="headerlink" title="搭建V2Ray代理"></a>搭建V2Ray代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
+<p>输入下面命令安装V2Ray：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/bwg_v2ray)</span><br></pre></td></tr></table></figure>
+<p>这里如果提示<code>curl: command not found</code>，则先安装curl：</p>
+<ul>
+<li>Ubuntu/Debian系统安装curl方法: <code>apt-get update -y &amp;&amp; apt-get install curl -y</code></li>
+<li>CentOS系统安装curl方法: <code>yum update -y &amp;&amp; yum install curl -y</code></li>
+</ul>
+<p>安装好curl后再次运行<code>bash &lt;(curl -s -L https://git.io/bwg_v2ray)</code>即可。</p>
+<p>第一步是提示安装还是卸载，自然是开始安装，输入1即可开始安装：</p>
+<p><img src="https://i.loli.net/2021/08/05/LOAWaQhzGoDNBnY.png" alt="v2ray-install.png"></p>
+<p>之后是选择V2Ray传输协议，很多种，包括TCP、WebSocket等，如果你不知道怎么选就直接回车选择默认的TCP即可：</p>
+<p><img src="https://i.loli.net/2021/08/05/gkBQqrY1lG5ZD9a.png" alt="v2ray-protocol-option.png"></p>
+<p>接下来就是一些其他设置，如V2Ray端口、是否开启广告拦截、是否配置Shadowsocks等，一样的，如果你不知道怎么选就直接回车选择默认的即可：</p>
+<p><img src="https://i.loli.net/2021/08/05/F3vdb9pfMUgytwH.png" alt="v2ray-other-options.png"></p>
+<p>选完配置后，就到了最后一步，确认无误后按下回车键开始安装V2Ray：</p>
+<p><img src="https://i.loli.net/2021/08/05/sihXO562mdDuFfR.png" alt="v2ray-install-start.png"></p>
+<p>最后，如下图所示，就表示你的搬瓦工VPS成功安装V2Ray了，页面上显示的是你V2Ray的连接信息：</p>
+<p><img src="https://i.loli.net/2021/08/05/KV9tenqiwbPG7Ak.png" alt="v2ray-install-end.png"></p>
+<p>配置文件路径：</p>
+<ul>
+<li>V2Ray 配置文件路径：/etc/v2ray/config.json</li>
+<li>Caddy 配置文件路径：/etc/caddy/Caddyfile</li>
+<li>脚本配置文件路径: /etc/v2ray/233blog_v2ray_backup.conf</li>
+</ul>
+<h2 id="管理V2Ray代理"><a href="#管理V2Ray代理" class="headerlink" title="管理V2Ray代理"></a>管理V2Ray代理</h2><p>成功安装V2Ray后，我们直接输入<code>v2ray</code>即可打开管理页面，如下图：</p>
+<p><img src="https://i.loli.net/2021/08/05/2W4vXpLy8mfUNYA.png" alt="v2ray-manage.png"></p>
+<p>常见的管理命令如下：</p>
+<ul>
+<li><code>v2ray info</code> 查看 V2Ray 配置信息</li>
+<li><code>v2ray config</code> 修改 V2Ray 配置</li>
+<li><code>v2ray link</code> 生成 V2Ray 配置文件链接</li>
+<li><code>v2ray infolink</code> 生成 V2Ray 配置信息链接</li>
+<li><code>v2ray qr</code> 生成 V2Ray 配置二维码链接</li>
+<li><code>v2ray ss</code> 修改 Shadowsocks 配置</li>
+<li><code>v2ray ssinfo</code> 查看 Shadowsocks 配置信息</li>
+<li><code>v2ray ssqr</code> 生成 Shadowsocks 配置二维码链接</li>
+<li><code>v2ray status</code> 查看 V2Ray 运行状态</li>
+<li><code>v2ray start</code> 启动 V2Ray</li>
+<li><code>v2ray stop</code> 停止 V2Ray</li>
+<li><code>v2ray restart</code> 重启 V2Ray</li>
+<li><code>v2ray log</code> 查看 V2Ray 运行日志</li>
+<li><code>v2ray update</code> 更新 V2Ray</li>
+<li><code>v2ray update.sh</code> 更新 V2Ray 管理脚本</li>
+<li><code>v2ray uninstall</code> 卸载 V2Ray</li>
+</ul>
+<h2 id="配置V2Ray客户端"><a href="#配置V2Ray客户端" class="headerlink" title="配置V2Ray客户端"></a>配置V2Ray客户端</h2><p>完成V2Ray服务端搭建后，我们就需要在本地客户端配置V2Ray了，支持iOS、Android手机、Mac、Windows等，其实就是在客户端上填入上一步的连接信息即可。</p>
+<p>详细教程整理如下。</p>
+<p><strong>1、iOS苹果手机客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFShadowrocket%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">iOS苹果手机客户端Shadowrocket下载方法与使用教程</a></p>
+<p><strong>2、Android安卓手机客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayNG%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">安卓手机客户端v2rayNG下载方法与使用教程</a></p>
+<p><strong>3、Mac客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/Mac%E5%AE%A2%E6%88%B7%E7%AB%AFV2RayX%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Mac客户端V2RayX下载方法与使用教程</a></p>
+<p><strong>4、Windows客户端</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/Windows%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayN%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Windows客户端v2rayN下载方法与使用教程</a></p>
+<h2 id="搭建V2Ray常见问题"><a href="#搭建V2Ray常见问题" class="headerlink" title="搭建V2Ray常见问题"></a>搭建V2Ray常见问题</h2><p>这个V2Ray一键脚本支持：</p>
+<ol>
+<li>支持 V2Ray 多数传输协议</li>
+<li>支持 WebSocket + TLS / HTTP/2</li>
+<li>支持 动态端口 (WebSocket + TLS，Socks5， HTTP/2 除外)</li>
+<li>支持 屏蔽广告</li>
+<li>支持 配置 Shadowsocks</li>
+<li>支持 下载客户端配置文件 (不用 Xshell 也可以下载)</li>
+<li>客户端配置文件同时支持 SOCKS 和 HTTP</li>
+<li>支持 生成 V2Ray 配置二维码链接 (仅适用部分客户端)</li>
+<li>支持 生成 V2Ray 配置信息链接</li>
+<li>支持 生成 Shadowsocks 配置二维码链接</li>
+<li>支持修改 V2Ray 传输协议</li>
+<li>支持修改 V2Ray 端口</li>
+<li>支持修改 动态端口</li>
+<li>支持修改 用户ID</li>
+<li>支持修改 TLS 域名</li>
+<li>支持修改 Shadowsocks 端口</li>
+<li>支持修改 Shadowsocks 密码</li>
+<li>支持修改 Shadowsocks 加密协议</li>
+<li>自动启用 BBR 优化 (如果内核支持)</li>
+<li>集成可选安装 BBR (by teddysun.com)</li>
+<li>集成可选安装 锐速 (by moeclub.org)</li>
+<li>一键 查看运行状态 / 查看配置信息 / 启动 / 停止 / 重启 / 更新 / 卸载 / 等等…</li>
+<li>人性化向导 &amp; 纯净安装 &amp; 卸载彻底</li>
+</ol>
+<p>在使用过程中一般不会出现问题，直接选择下一步就可以了，如果你的系统不支持使用这个脚本，可以尝试更换一个系统，支持Ubuntu 16+ / Debian 8+ / CentOS 7+，推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/" rel="tag"># 搬瓦工翻墙教程</a>
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5v2ray/" rel="tag"># 搬瓦工v2ray</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/justmysocks-tutorial/" rel="prev" title="搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理">
+      <i class="fa fa-chevron-left"></i> 搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/" rel="next" title="搬瓦工VPS搭建Shadowsocks/ShadowsocksR(SS/SSR)代理科学上网翻墙教程（2021年更新）">
+      搬瓦工VPS搭建Shadowsocks/ShadowsocksR(SS/SSR)代理科学上网翻墙教程（2021年更新） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0%E6%90%AC%E7%93%A6%E5%B7%A5VPS"><span class="nav-number">1.</span> <span class="nav-text">购买搬瓦工VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%90%AC%E7%93%A6%E5%B7%A5VPS"><span class="nav-number">2.</span> <span class="nav-text">连接搬瓦工VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAV2Ray%E4%BB%A3%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">搭建V2Ray代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86V2Ray%E4%BB%A3%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">管理V2Ray代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEV2Ray%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">5.</span> <span class="nav-text">配置V2Ray客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAV2Ray%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">搭建V2Ray常见问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="搬瓦工"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">搬瓦工</p>
+  <div class="site-description" itemprop="description">搬瓦工，搬瓦工中文网，分享搬瓦工教程和搬瓦工优惠码。搬瓦工CN2 GIA、搬瓦工香港、搬瓦工日本、搬瓦工搭建、搬瓦工使用。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">搬瓦工</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+
+<div class="powered-by">由 <a href="https://bwgvps.github.io" class="theme-link" rel="noopener" target="_blank">搬瓦工</a> &amp; <a href="https://github.com/bwgvps/bwgvps.github.io" class="theme-link" rel="noopener" target="_blank">BandwagonHost</a> 强力驱动 <a href="https://bwgvps.github.io/sitemap.xml" rel="noopener nofollow" target="_blank">sitemap</a> <a href="https://bwgvps.github.io/baidusitemap.xml" rel="noopener nofollow" target="_blank">百度sitemap</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
