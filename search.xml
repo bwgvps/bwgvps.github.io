@@ -437,6 +437,23 @@
 <h2 id="Just-My-Socks本地使用"><a href="#Just-My-Socks本地使用" class="headerlink" title="Just My Socks本地使用"></a>Just My Socks本地使用</h2><p>Just My Socks支持电脑和手机客户端，我们只需要下载对应的软件，导入配置即可，可以按照上一部分的教程手动输入连接信息，也可以直接使用订阅链接将所有配置都导入到客户端中。</p>
 <p>Just My Socks官方提供客户端下载地址以及每种客户端的使用方法，包括Android、iOS/iPhone、Mac、Windows等。具体位置在Support-&gt;Knowledgebase，如下图所示：</p>
 <p><img src="https://i.loli.net/2021/07/20/mtR2DPJVxszQ8L1.png" alt="just my socks knowledgebase.png"></p>
+<p>有了连接信息后在本地连接其实就非常简单了，这里也分享下详细的使用教程。</p>
+<h3 id="SS账号本地使用教程"><a href="#SS账号本地使用教程" class="headerlink" title="SS账号本地使用教程"></a>SS账号本地使用教程</h3><p><strong>1、iOS苹果手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">iOS苹果手机客户端使用Shadowsocks教程</a></p>
+<p><strong>2、Android安卓手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Android%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Android安卓手机客户端使用Shadowsocks教程</a></p>
+<p><strong>3、Mac客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Mac%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Mac苹果电脑客户端使用Shadowsocks教程</a></p>
+<p><strong>4、Windows客户端</strong></p>
+<p><a href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Windows%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Windows电脑客户端使用Shadowsocks教程</a></p>
+<h3 id="V2Ray账号本地使用教程"><a href="#V2Ray账号本地使用教程" class="headerlink" title="V2Ray账号本地使用教程"></a>V2Ray账号本地使用教程</h3><p><strong>1、iOS苹果手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFShadowrocket%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">iOS苹果手机客户端Shadowrocket下载方法与使用教程</a></p>
+<p><strong>2、Android安卓手机客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayNG%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">安卓手机客户端v2rayNG下载方法与使用教程</a></p>
+<p><strong>3、Mac客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/Mac%E5%AE%A2%E6%88%B7%E7%AB%AFV2RayX%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Mac客户端V2RayX下载方法与使用教程</a></p>
+<p><strong>4、Windows客户端</strong></p>
+<p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/Windows%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayN%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Windows客户端v2rayN下载方法与使用教程</a></p>
 <h2 id="Just-My-Socks常见问题"><a href="#Just-My-Socks常见问题" class="headerlink" title="Just My Socks常见问题"></a>Just My Socks常见问题</h2><p>一些在使用Just My Socks时可能有的疑问整理如下。</p>
 <p><strong>1、哪组服务器最快？</strong></p>
 <p>如果你使用电信宽带，推荐优先使用第三组服务器，这个线路速度对电信是最好的</p>
