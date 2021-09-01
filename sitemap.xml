@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bwgvps.github.io/justmysocks-tutorial/</loc>
+    <loc>https://bwgvps.github.io/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/</loc>
     
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bwgvps.github.io/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/</loc>
+    <loc>https://bwgvps.github.io/justmysocks-tutorial/</loc>
     
-    <lastmod>2021-08-09</lastmod>
+    <lastmod>2021-08-12</lastmod>
     
   </url>
   
@@ -74,7 +74,7 @@
 
   <url>
     <loc>https://bwgvps.github.io/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,42 +82,42 @@
   
   <url>
     <loc>https://bwgvps.github.io/tags/%E6%90%AC%E7%93%A6%E5%B7%A5%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bwgvps.github.io/tags/%E6%90%AC%E7%93%A6%E5%B7%A5%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bwgvps.github.io/tags/%E6%90%AC%E7%93%A6%E5%B7%A5shadowsocks/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bwgvps.github.io/tags/%E6%90%AC%E7%93%A6%E5%B7%A5shadowsocksr/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bwgvps.github.io/tags/%E6%90%AC%E7%93%A6%E5%B7%A5v2ray/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bwgvps.github.io/tags/Just-My-Socks%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,14 +126,14 @@
   
   <url>
     <loc>https://bwgvps.github.io/categories/BandwagonHost/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bwgvps.github.io/categories/Just-My-Socks/</loc>
-    <lastmod>2021-08-12</lastmod>
+    <lastmod>2021-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
