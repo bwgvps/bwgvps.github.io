@@ -22,32 +22,30 @@
     var CONFIG = {"hostname":"bwgvps.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="搬瓦工机场Just My Socks买了后怎么用？如何在手机或者电脑上连接并使用Just My Socks？这一篇教程详细记录了Just My Socks使用教程。">
+  <meta name="description" content="本文介绍如何在搬瓦工VPS上搭建安装Xray代理（基于Nginx的VLESS+XTLS）实现科学上网翻墙，包括服务器搭建和客户端配置。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理">
-<meta property="og:url" content="https://bwgvps.github.io/justmysocks-tutorial/index.html">
+<meta property="og:title" content="搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2021年更新）">
+<meta property="og:url" content="https://bwgvps.github.io/build-xray-on-bandwagonhost-vps/index.html">
 <meta property="og:site_name" content="搬瓦工">
-<meta property="og:description" content="搬瓦工机场Just My Socks买了后怎么用？如何在手机或者电脑上连接并使用Just My Socks？这一篇教程详细记录了Just My Socks使用教程。">
+<meta property="og:description" content="本文介绍如何在搬瓦工VPS上搭建安装Xray代理（基于Nginx的VLESS+XTLS）实现科学上网翻墙，包括服务器搭建和客户端配置。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/eEKzkuQwmVl6v5b.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/ZSlK8mzWqAJgGNB.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/m9JwfrQi54G2qL8.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/6GY7eAtEXFwmHLh.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/13fBwgd2plPQ8e4.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/7GpF4C6RbSAri8x.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/l13ni6NaRStMW2Q.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/AsKTfhSWU2NJpZw.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/nofEFZpduJtwiHj.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/mtR2DPJVxszQ8L1.png">
-<meta property="og:image" content="https://i.loli.net/2021/07/20/mncKjBIzpO62Tks.png">
-<meta property="article:published_time" content="2021-07-20T13:12:11.000Z">
-<meta property="article:modified_time" content="2021-08-12T15:36:04.915Z">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/ki1oqhTm6IN2vVf.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/XjbtciW4VRSKD7M.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/Uvu8MBbIPkSGFoA.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/arUChKR19c6OvmM.jpg">
+<meta property="article:published_time" content="2021-12-04T12:02:02.000Z">
+<meta property="article:modified_time" content="2021-12-04T12:31:04.463Z">
 <meta property="article:author" content="搬瓦工">
-<meta property="article:tag" content="Just My Socks新手教程">
+<meta property="article:tag" content="搬瓦工翻墙教程">
+<meta property="article:tag" content="搬瓦工v2ray">
+<meta property="article:tag" content="搬瓦工xray">
+<meta property="article:tag" content="搬瓦工vless">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/07/20/eEKzkuQwmVl6v5b.png">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png">
 
-<link rel="canonical" href="https://bwgvps.github.io/justmysocks-tutorial/">
+<link rel="canonical" href="https://bwgvps.github.io/build-xray-on-bandwagonhost-vps/">
 
 
 <script id="page-configurations">
@@ -60,7 +58,7 @@
   };
 </script>
 
-  <title>搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理 | 搬瓦工</title>
+  <title>搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2021年更新） | 搬瓦工</title>
   
 
 
@@ -204,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://bwgvps.github.io/justmysocks-tutorial/">
+    <link itemprop="mainEntityOfPage" href="https://bwgvps.github.io/build-xray-on-bandwagonhost-vps/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -217,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理
+          搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2021年更新）
         </h1>
 
         <div class="post-meta">
@@ -226,23 +224,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-07-20 21:12:11" itemprop="dateCreated datePublished" datetime="2021-07-20T21:12:11+08:00">2021-07-20</time>
+              <time title="创建时间：2021-12-04 20:02:02 / 修改时间：20:31:04" itemprop="dateCreated datePublished" datetime="2021-12-04T20:02:02+08:00">2021-12-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-12 23:36:04" itemprop="dateModified" datetime="2021-08-12T23:36:04+08:00">2021-08-12</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Just-My-Socks/" itemprop="url" rel="index"><span itemprop="name">Just My Socks</span></a>
+                  <a href="/categories/BandwagonHost/" itemprop="url" rel="index"><span itemprop="name">搬瓦工</span></a>
                 </span>
             </span>
 
@@ -257,51 +249,97 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Just My Socks怎么用？之前已经介绍了<a href="https://bwgvps.github.io/purchase-justmysocks/">搬瓦工机场Just My Socks注册与购买教程</a>，那么买了后怎么连接Just My Socks呢？带着这些疑问，本文分享Just My Socks使用教程，包括连接信息查看、本地使用方法，以及常见的后台教程。</p>
-<h2 id="Just-My-Socks连接信息查看"><a href="#Just-My-Socks连接信息查看" class="headerlink" title="Just My Socks连接信息查看"></a>Just My Socks连接信息查看</h2><p>如果你还没有购买，则可以参考<a href="https://bwgvps.github.io/purchase-justmysocks/">搬瓦工机场Just My Socks注册与购买教程</a>先去注册一个账号，Just My Socks支持7天无理由退款，所以大家可以放心购买。</p>
-<p>Just My Socks官网：<a target="_blank" rel="noopener" href="https://linknn.net/jms">justmysocks3.net</a></p>
-<p>打开官网，登陆自己的账号：</p>
-<p><img src="https://i.loli.net/2021/07/20/eEKzkuQwmVl6v5b.png" alt="Just My Socks login.png"></p>
-<p>在登陆页面输入用户名和密码，以及验证码：</p>
-<p><img src="https://i.loli.net/2021/07/20/ZSlK8mzWqAJgGNB.png" alt="Just My Socks login-info.png"></p>
-<p>成功登陆Just My Socks后，在Services-&gt;My Services下我们可以看到Just My Socks服务列表，点击刚才购买的服务：</p>
-<p><img src="https://i.loli.net/2021/07/20/m9JwfrQi54G2qL8.png" alt="just my socks-my-services.png"></p>
-<p>这里就是Just My Socks服务详情页面了，第一部分就是服务的基本信息，我们需要关注的包括账单金额、续费时间、已用流量以及流量重置日期：</p>
-<p><img src="https://i.loli.net/2021/07/20/6GY7eAtEXFwmHLh.png" alt="just my socks service details.png"></p>
-<p>这一部分是连接信息，包括加密、端口、密码、UUID、AlterID等，第一部分是Shadowsocks的信息，第二部分是V2Ray的信息：</p>
-<p><img src="https://i.loli.net/2021/07/20/13fBwgd2plPQ8e4.png" alt="just my socks service details-2.png"></p>
-<p>以及服务器地址，为了方便更换IP地址，Just My Socks默认是提供域名作为服务器地址的：</p>
-<p><img src="https://i.loli.net/2021/07/20/7GpF4C6RbSAri8x.png" alt="just my socks service details-3.png"></p>
-<p>一些客户端可能不支持域名解析，下面也有每个域名对应的IP，不过如果使用IP代替域名，那么你就需要时常上来看看IP地址是否更换了，因为IP被封后，Just My Socks是会自动更换IP的：</p>
-<p><img src="https://i.loli.net/2021/07/20/l13ni6NaRStMW2Q.png" alt="just my socks service details-4.png"></p>
-<p>如果你本地支持扫描二维码导入配置，也可以直接扫描二维码：</p>
-<p><img src="https://i.loli.net/2021/07/20/AsKTfhSWU2NJpZw.png" alt="just my socks qr code.png"></p>
-<p>另外，Just My Socks提供订阅功能，所以建议使用订阅链接方式来添加配置，这样不仅仅省时省力，并且不会出现输入错误信息的情况。</p>
-<p>你可以在后台看到“订阅链接”，如下图位置所示：</p>
-<p><img src="https://i.loli.net/2021/07/20/nofEFZpduJtwiHj.png" alt="just my socks subscription link.png"></p>
-<p>将“订阅链接”复制，再在相关软件上配置订阅相关选项即可。之后更新订阅，就能获取全部配置信息了。</p>
-<p>默认的 订阅链接 是使用 IP 作为服务器地址，建议在 订阅链接 的后面加上 &amp;usedomains=1<br>这样来就是使用 Just My Socks 的域名作为服务器地址了，使用域名可以时刻保持为最新可用的 IP。</p>
-<p>如果你不想同时订阅 V2RAY 和 Shadowsocks：</p>
+        <p>Xray是因为许可问题从V2Ray独立出来的一个分支，兼容V2Ray的配置，并且提供完整的VLESS和XTLS支持。下面从零开始介绍搬瓦工VPS如何搭建X2ray代理实现科学上网翻墙，一键脚本搭建VLESS+TCP+XTLS。</p>
+<h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
+<p>本站推荐的搬瓦工套餐如下：</p>
+<table>
+<thead>
+<tr>
+<th>套餐</th>
+<th>CPU</th>
+<th>内存</th>
+<th>硬盘</th>
+<th>宽带</th>
+<th>流量/月</th>
+<th>价格</th>
+<th>购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>美国CN2 GT</td>
+<td>1核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>1Gbps</td>
+<td>1TB</td>
+<td>$49.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/57">立即购买</a></td>
+</tr>
+<tr>
+<td>美国CN2 GIA</td>
+<td>2核</td>
+<td>1GB</td>
+<td>20G</td>
+<td>2.5Gbps</td>
+<td>1TB</td>
+<td>$49.99/季度$169.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/87">立即购买</a></td>
+</tr>
+<tr>
+<td>香港CN2 GIA</td>
+<td>2核</td>
+<td>2GB</td>
+<td>40G</td>
+<td>1Gbps</td>
+<td>500GB</td>
+<td>$89.99/月$899.99/年</td>
+<td><a target="_blank" rel="noopener" href="https://linknn.net/bwg/95">立即购买</a></td>
+</tr>
+</tbody></table>
+<p>详细的搬瓦工注册与购买教程可以参考<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</a></p>
+<h2 id="连接搬瓦工VPS"><a href="#连接搬瓦工VPS" class="headerlink" title="连接搬瓦工VPS"></a>连接搬瓦工VPS</h2><p>买好搬瓦工VPS后，搬瓦工会将VPS的连接信息发到你的注册邮箱，root密码可以在KiwiVM控制面板查看，详细教程可以参考<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
+<p>找到连接信息后，就是在本地连接搬瓦工VPS了，Windows用户可以使用PuTTY，Mac用户可以使用自带的终端。</p>
+<p><strong>Windows连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/V54iS93KJkF8oGb.png" alt="填写SSH信息.png"></p>
+<p><strong>Mac连接搬瓦工VPS</strong>：</p>
+<p><img src="https://i.loli.net/2021/07/19/8jBafbPVnuMpgNt.jpg" alt="Terminal命令.jpg"></p>
+<p>详细图文教程：<a href="https://bwgvps.github.io/connect-bandwagonhost-vps/">本地Windows/Mac连接搬瓦工VPS教程
+</a></p>
+<h2 id="准备域名"><a href="#准备域名" class="headerlink" title="准备域名"></a>准备域名</h2><p>VLESS+TCP+XTLS模式是需要域名的，我们可以去NameSilo注册一个便宜的域名，例如.co结尾的域名，一年大概20块钱，再添加A记录指向我们VPS的IP地址。</p>
+<p>这个教程还是比较简单的，如果你知道如何添加A记录，可以直接谷歌相关教程。</p>
+<h2 id="搭建V2Ray代理"><a href="#搭建V2Ray代理" class="headerlink" title="搭建V2Ray代理"></a>搭建V2Ray代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
+<p>输入下面命令安装V2Ray：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sL https://s.hijk.art/xray.sh)</span><br></pre></td></tr></table></figure>
+<p>这里如果提示<code>curl: command not found</code>，则先安装curl：</p>
 <ul>
-<li><p>排除订阅 Shadowsocks 的配置，请在 订阅链接 后面加上 &amp;noss=1</p>
-</li>
-<li><p>排除订阅 V2RAY 的配置，请在 订阅链接 后面加上 &amp;novmess=1</p>
-</li>
+<li>Ubuntu/Debian系统安装curl方法: <code>apt-get update -y &amp;&amp; apt-get install curl -y</code></li>
+<li>CentOS系统安装curl方法: <code>yum update -y &amp;&amp; yum install curl -y</code></li>
 </ul>
-<p>目前常见的上网软件都支持使用订阅的，比如说 v2rayN 和 v2rayNG 等。</p>
-<h2 id="Just-My-Socks本地使用"><a href="#Just-My-Socks本地使用" class="headerlink" title="Just My Socks本地使用"></a>Just My Socks本地使用</h2><p>Just My Socks支持电脑和手机客户端，我们只需要下载对应的软件，导入配置即可，可以按照上一部分的教程手动输入连接信息，也可以直接使用订阅链接将所有配置都导入到客户端中。</p>
-<p>Just My Socks官方提供客户端下载地址以及每种客户端的使用方法，包括Android、iOS/iPhone、Mac、Windows等。具体位置在Support-&gt;Knowledgebase，如下图所示：</p>
-<p><img src="https://i.loli.net/2021/07/20/mtR2DPJVxszQ8L1.png" alt="just my socks knowledgebase.png"></p>
-<p>有了连接信息后在本地连接其实就非常简单了，这里也分享下详细的使用教程。</p>
-<h3 id="SS账号本地使用教程"><a href="#SS账号本地使用教程" class="headerlink" title="SS账号本地使用教程"></a>SS账号本地使用教程</h3><p><strong>1、iOS苹果手机客户端</strong></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">iOS苹果手机客户端使用Shadowsocks教程</a></p>
-<p><strong>2、Android安卓手机客户端</strong></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Android%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Android安卓手机客户端使用Shadowsocks教程</a></p>
-<p><strong>3、Mac客户端</strong></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Mac%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Mac苹果电脑客户端使用Shadowsocks教程</a></p>
-<p><strong>4、Windows客户端</strong></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/shadowsocks-tutorial/wiki/Windows%E7%94%B5%E8%84%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8Shadowsocks%E6%95%99%E7%A8%8B">Windows电脑客户端使用Shadowsocks教程</a></p>
-<h3 id="V2Ray账号本地使用教程"><a href="#V2Ray账号本地使用教程" class="headerlink" title="V2Ray账号本地使用教程"></a>V2Ray账号本地使用教程</h3><p><strong>1、iOS苹果手机客户端</strong></p>
+<p>安装好curl后再次运行<code>bash &lt;(curl -sL https://s.hijk.art/xray.sh)</code>即可。</p>
+<p>第一步是提示安装还是卸载，这个脚本支持很多版本的Xray和V2ray，出于安全和稳定性方面的考虑，一般建议选择<strong>VLESS+TCP+XTLS</strong>，即输入<em>8</em>开始安装：</p>
+<p><img src="https://s2.loli.net/2021/12/04/ki1oqhTm6IN2vVf.jpg" alt="xary-install-1.jpg"></p>
+<p>这是是选择伪装域名，因为使用<strong>VLESS+TCP+XTLS</strong>是需要搭建一个网站来伪装代理流量的，以此来防止IP被封，输入<em>y</em>，并输入我们刚才准备的域名：</p>
+<p><img src="https://s2.loli.net/2021/12/04/XjbtciW4VRSKD7M.jpg" alt="xary-install-2.jpg"></p>
+<p>接下来就是一些其他设置，如监听端口，一般直接选择默认的配置接口，即443端口、xtls-rprx-direct流控模式、高清壁纸图站、允许搜索引擎爬取、安装BBR：</p>
+<p><img src="https://s2.loli.net/2021/12/04/Uvu8MBbIPkSGFoA.jpg" alt="xary-install-3.jpg"></p>
+<p>最后，如下图所示，就表示你的搬瓦工VPS成功安装Xray了，页面上显示的是你Xray的连接信息：</p>
+<p><img src="https://s2.loli.net/2021/12/04/arUChKR19c6OvmM.jpg" alt="xary-install-4.jpg"></p>
+<h2 id="Xray脚本介绍"><a href="#Xray脚本介绍" class="headerlink" title="Xray脚本介绍"></a>Xray脚本介绍</h2><p>Xray一键脚本支持的组合方式：</p>
+<ul>
+<li>VMESS，即最普通的V2ray服务器，没有伪装，也不是VLESS</li>
+<li>VMESS+KCP，传输协议使用mKCP，VPS线路不好时可能有奇效</li>
+<li>VMESS+TCP+TLS，带伪装的V2ray，不能过CDN中转</li>
+<li>VMESS+WS+TLS，即最通用的V2ray伪装方式，能过CDN中转，推荐使用</li>
+<li>VLESS+KCP，传输协议使用mKCP</li>
+<li>VLESS+TCP+TLS，通用的VLESS版本，不能过CDN中转，但比VMESS+TCP+TLS方式性能更好</li>
+<li>VLESS+WS+TLS，基于websocket的V2ray伪装VLESS版本，能过CDN中转，有过CDN情况下推荐使用</li>
+<li>VLESS+TCP+XTLS，目前最强悍的VLESS+XTLS组合，强力推荐使用（但是支持的客户端少一些）</li>
+<li>trojan，轻量级的伪装协议</li>
+<li>trojan+XTLS，trojan加强版，使用XTLS技术提升性能</li>
+</ul>
+<h2 id="配置Xray客户端"><a href="#配置Xray客户端" class="headerlink" title="配置Xray客户端"></a>配置Xray客户端</h2><p>完成Xray服务端搭建后，我们就需要在本地客户端配置Xray了，支持iOS、Android手机、Mac、Windows等，其实就是在客户端上填入上一步的连接信息即可。</p>
+<p>详细教程整理如下。</p>
+<p><strong>1、iOS苹果手机客户端</strong></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/iOS%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFShadowrocket%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">iOS苹果手机客户端Shadowrocket下载方法与使用教程</a></p>
 <p><strong>2、Android安卓手机客户端</strong></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayNG%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">安卓手机客户端v2rayNG下载方法与使用教程</a></p>
@@ -309,30 +347,10 @@
 <p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/Mac%E5%AE%A2%E6%88%B7%E7%AB%AFV2RayX%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Mac客户端V2RayX下载方法与使用教程</a></p>
 <p><strong>4、Windows客户端</strong></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/bwgvps/v2ray-tutorial/wiki/Windows%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayN%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Windows客户端v2rayN下载方法与使用教程</a></p>
-<h2 id="Just-My-Socks常见问题"><a href="#Just-My-Socks常见问题" class="headerlink" title="Just My Socks常见问题"></a>Just My Socks常见问题</h2><p>一些在使用Just My Socks时可能有的疑问整理如下。</p>
-<p><strong>1、哪组服务器最快？</strong></p>
-<p>如果你使用电信宽带，推荐优先使用第三组服务器，这个线路速度对电信是最好的</p>
-<p>第四组服务器对移动和联通线路优化比较好，适合使用移动上网的小伙伴</p>
-<p>第五组是三网CN2 GIA线路，移动、电信、联通都可以使用。</p>
-<p><strong>2、Just My Socks新手教程有哪些？</strong></p>
-<p>Just My Socks常用的功能在后台都有入口，这里将后台界面的一些重要的选项及给详细标注出来了，见下图</p>
-<p><img src="https://i.loli.net/2021/07/20/mncKjBIzpO62Tks.png" alt="just my socks faq.png"></p>
-<p>先从左边挑几个重点的说。</p>
-<p>1，更改账单周期</p>
-<p>这个东西是更改套餐的续费周期的，推荐使用 年付 (Annually) 账单周期，因为这样可以更加省钱。</p>
-<p>2，更改密码</p>
-<p>更改密码会同时更改 shadowsocks 的密码 和 v2ray 的 uuid，并且由于 justmysocks 是使用 v2ray 的 uuid 来标识订阅链接的，还有流量 API 的链接，所以如果更改了密码，你要使用新的订阅链接和流量 API 链接。</p>
-<p>3，更改端口</p>
-<p>更改端口2会同时更改 shadowsocks 的端口 和 v2ray 的 端口。</p>
-<p>4，升级或降级</p>
-<p>如果你觉得现有的套餐不能满足你的需求，那么你可以升级到更多流量的套餐。</p>
-<p>好，现在说一下右边的一些使用状态提示。</p>
-<p>1，续费日期</p>
-<p>千万不要忘记续费，要不然你的服务会被停止，特别是有老套餐的，如果忘记续费，那么你的传家宝套餐就没了。</p>
-<p>2，流量使用状态</p>
-<p>你可以看到当前使用了多少 G 的流量，如果流量用完了，此处会显示红色的。</p>
-<p>3，流量重置日期</p>
-<p>Just My Socks流量是按月计算的，这是每月流量重置的日期，以美国洛杉矶时间为准。</p>
+<h2 id="搭建Xray常见问题"><a href="#搭建Xray常见问题" class="headerlink" title="搭建Xray常见问题"></a>搭建Xray常见问题</h2><p>对于VLESS协议、VMESS+WS+TLS的组合，网页上输入伪装域名，能正常打开伪装站，说明服务端已经正确配置好。</p>
+<p>对于使用TLS的方式，脚本默认会申请域名证书，证书存放在和xray配置文件同一个文件夹内（即<code>/usr/local/etc/xray</code>目录下）。证书会自动更新，如果客户端突然无法使用，请打开伪装网站查看是否能正常打开。如果证书已过期，请再次运行上面的脚本重新配置。</p>
+<p>最后，刚搭建好Xray后不要猛上流量，否则会导致被限速、端口被墙，严重可能导致ip被墙。</p>
+<p>在使用过程中一般不会出现问题，直接选择下一步就可以了，如果你的系统不支持使用这个脚本，可以尝试更换一个系统，支持Ubuntu 16+ / Debian 8+ / CentOS 7+，推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化。</p>
 
     </div>
 
@@ -342,7 +360,10 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Just-My-Socks%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" rel="tag"># Just My Socks新手教程</a>
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/" rel="tag"># 搬瓦工翻墙教程</a>
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5v2ray/" rel="tag"># 搬瓦工v2ray</a>
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5xray/" rel="tag"># 搬瓦工xray</a>
+              <a href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5vless/" rel="tag"># 搬瓦工vless</a>
           </div>
 
         
@@ -351,13 +372,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/purchase-justmysocks/" rel="prev" title="搬瓦工机场Just My Socks注册与购买教程">
-      <i class="fa fa-chevron-left"></i> 搬瓦工机场Just My Socks注册与购买教程
+    <a href="/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/" rel="prev" title="搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2021年更新）">
+      <i class="fa fa-chevron-left"></i> 搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2021年更新）
     </a></div>
-      <div class="post-nav-item">
-    <a href="/build-v2ray-on-bandwagonhost-vps/" rel="next" title="搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新）">
-      搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2021年更新） <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -416,7 +434,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Just-My-Socks%E8%BF%9E%E6%8E%A5%E4%BF%A1%E6%81%AF%E6%9F%A5%E7%9C%8B"><span class="nav-number">1.</span> <span class="nav-text">Just My Socks连接信息查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Just-My-Socks%E6%9C%AC%E5%9C%B0%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">Just My Socks本地使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SS%E8%B4%A6%E5%8F%B7%E6%9C%AC%E5%9C%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">SS账号本地使用教程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#V2Ray%E8%B4%A6%E5%8F%B7%E6%9C%AC%E5%9C%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-number">2.2.</span> <span class="nav-text">V2Ray账号本地使用教程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Just-My-Socks%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">Just My Socks常见问题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0%E6%90%AC%E7%93%A6%E5%B7%A5VPS"><span class="nav-number">1.</span> <span class="nav-text">购买搬瓦工VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%90%AC%E7%93%A6%E5%B7%A5VPS"><span class="nav-number">2.</span> <span class="nav-text">连接搬瓦工VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%9F%9F%E5%90%8D"><span class="nav-number">3.</span> <span class="nav-text">准备域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAV2Ray%E4%BB%A3%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">搭建V2Ray代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Xray%E8%84%9A%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text">Xray脚本介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEXray%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">6.</span> <span class="nav-text">配置Xray客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAXray%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">搭建Xray常见问题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
