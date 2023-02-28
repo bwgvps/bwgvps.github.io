@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>搬瓦工优惠码分享（2022年最新）</title>
+    <title>搬瓦工优惠码分享（2023年最新）</title>
     <url>/bandwagonhost-promotional-code/</url>
     <content><![CDATA[<p>搬瓦工优惠码（Promotional Code）提供循环优惠，我们在购买搬瓦工VPS时使用搬瓦工优惠码可以获取相应的折扣，本文整理最新的搬瓦工优惠码。</p>
 <p>2022年最新可用搬瓦工优惠码以及循环优惠百分比整理如下：</p>
@@ -53,31 +53,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工SSH连接信息查看：IP、端口、密码</title>
-    <url>/bandwagonhost-vps-info/</url>
-    <content><![CDATA[<p>在搬瓦工VPS方案购买成功后，VPS的连接信息就会即时发送到你的注册邮箱，但是想要开始使用搬瓦工VPS，需要登陆SSH。对此许多朋友有很多疑惑，比如登录所需要的的IP地址是什么、SSH端口号是什么以及SSH密码怎么获得？所以本文就分享一下搬瓦工连结SSH的具体教程，其中最重要的就是如何进行信息查看，获取登陆所需的信息。</p>
-<h2 id="搬瓦工SSH-IP和端口"><a href="#搬瓦工SSH-IP和端口" class="headerlink" title="搬瓦工SSH IP和端口"></a>搬瓦工SSH IP和端口</h2><p>搬瓦工官网：<a href="https://linknn.net/bwg">点击打开搬瓦工官网</a></p>
-<p>搬瓦工VPS方案已经购买成功的朋友，可以直接进入搬瓦工官网，如下图所示，点击上方的“Client Area”，即可进入搬瓦工 KiwiVM后台；如果还未购买，可参照《<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买</a>》这篇文章，购买搬瓦工VPS方案，购买成功后再进行上述操作。</p>
-<p><img src="https://i.loli.net/2021/07/17/aTkKBX3LRWedjcC.png" alt="搬瓦工的官方网站.png"></p>
-<p>依次点击页面上方“Services”-&gt;“My　Services”，就会出现下图页面，然后点击”KiwiVM　Control　Panel“即可进入控制页面。</p>
-<p><img src="https://i.loli.net/2021/07/17/f3TOIk7xatyPK6r.png" alt="搬瓦工重置密码操作第一步.png"></p>
-<p>在进入搬瓦工 KiwiVM后台后，就能看到以下内容，包括搬瓦工SSH IP、端口和一些基本信息。</p>
-<p><img src="https://i.loli.net/2021/07/17/QKr2IA89qxb4MUn.png" alt="SSH的IP和端口界面.png"></p>
-<h2 id="搬瓦工SSH密码"><a href="#搬瓦工SSH密码" class="headerlink" title="搬瓦工SSH密码"></a>搬瓦工SSH密码</h2><p>搬瓦工的SSH用户名是root，而SSH密码会在你购买套餐/重装系统/重置密码后发至你注册时所填的绑定邮箱里。如果没有收到或忘记密码了，可以通过重置密码的方式获取root密码。</p>
-<p>因为重置密码需要保证VPS开机状态，所以在进行密码重置前我们要格外注意。在搬瓦工实例管理界面，确保VPS状态为”Running“。</p>
-<p><img src="https://i.loli.net/2021/07/17/KmFerTDf4B6xNSv.png" alt="VPS状态 _1_.png"></p>
-<p>之后选择左侧的”Root password modification“，进入搬瓦工的修改root密码栏目，再点击”Generate and set new root password“就可以修改并设置搬瓦工的ROOT密码了。</p>
-<p><img src="https://i.loli.net/2021/07/17/3ec49NhQIWPFVt1.png" alt="搬瓦工重置密码第二步.png"></p>
-]]></content>
-      <categories>
-        <category>搬瓦工</category>
-      </categories>
-      <tags>
-        <tag>搬瓦工新手教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2022年更新）</title>
+    <title>搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2023年更新）</title>
     <url>/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>Shadowsocks(SS)以及ShadowsocksR(SSR)是之前用的非常多的代理工具，虽然现在逐渐被<a href="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/">V2Ray</a>取代了，但是还是有不少朋友习惯使用SS/SSR，本文分享如何在搬瓦工VPS上搭建SS/SSR代理。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -221,7 +197,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2022年更新）</title>
+    <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2023年更新）</title>
     <url>/build-v2ray-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>大部分国内用户购买搬瓦工VPS都是用于翻墙的，但是很多朋友在买了搬瓦工VPS并不知道如何搭建代理，今天就以目前最火也是最稳的代理方式V2Ray为例，从零开始介绍搬瓦工VPS如何搭建V2Ray代理实现科学上网翻墙。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -372,7 +348,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2022年更新）</title>
+    <title>搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2023年更新）</title>
     <url>/build-xray-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>Xray是因为许可问题从V2Ray独立出来的一个分支，兼容V2Ray的配置，并且提供完整的VLESS和XTLS支持。下面从零开始介绍搬瓦工VPS如何搭建X2ray代理实现科学上网翻墙，一键脚本搭建VLESS+TCP+XTLS。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -665,6 +641,30 @@
 <h2 id="搬瓦工支付"><a href="#搬瓦工支付" class="headerlink" title="搬瓦工支付"></a>搬瓦工支付</h2><p>最后就是搬瓦工支付页面，搬瓦工支持支付宝、信用卡和PayPal支付，选择“Alipay”（支付宝）为支付方式，然后在”I have read and….”处打勾，最后点击”Complete Order”：</p>
 <p><img src="https://i.loli.net/2021/07/15/yZiI2qc3OjQY9Rn.png" alt="搬瓦工支付.png"></p>
 <p>最后用支付宝扫码完成支付，也就完成了搬瓦工VPS方案的购买。</p>
+]]></content>
+      <categories>
+        <category>搬瓦工</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搬瓦工SSH连接信息查看：IP、端口、密码</title>
+    <url>/bandwagonhost-vps-info/</url>
+    <content><![CDATA[<p>在搬瓦工VPS方案购买成功后，VPS的连接信息就会即时发送到你的注册邮箱，但是想要开始使用搬瓦工VPS，需要登陆SSH。对此许多朋友有很多疑惑，比如登录所需要的的IP地址是什么、SSH端口号是什么以及SSH密码怎么获得？所以本文就分享一下搬瓦工连结SSH的具体教程，其中最重要的就是如何进行信息查看，获取登陆所需的信息。</p>
+<h2 id="搬瓦工SSH-IP和端口"><a href="#搬瓦工SSH-IP和端口" class="headerlink" title="搬瓦工SSH IP和端口"></a>搬瓦工SSH IP和端口</h2><p>搬瓦工官网：<a href="https://linknn.net/bwg">点击打开搬瓦工官网</a></p>
+<p>搬瓦工VPS方案已经购买成功的朋友，可以直接进入搬瓦工官网，如下图所示，点击上方的“Client Area”，即可进入搬瓦工 KiwiVM后台；如果还未购买，可参照《<a href="https://bwgvps.github.io/purchase-bandwagonhost/">搬瓦工注册与购买</a>》这篇文章，购买搬瓦工VPS方案，购买成功后再进行上述操作。</p>
+<p><img src="https://i.loli.net/2021/07/17/aTkKBX3LRWedjcC.png" alt="搬瓦工的官方网站.png"></p>
+<p>依次点击页面上方“Services”-&gt;“My　Services”，就会出现下图页面，然后点击”KiwiVM　Control　Panel“即可进入控制页面。</p>
+<p><img src="https://i.loli.net/2021/07/17/f3TOIk7xatyPK6r.png" alt="搬瓦工重置密码操作第一步.png"></p>
+<p>在进入搬瓦工 KiwiVM后台后，就能看到以下内容，包括搬瓦工SSH IP、端口和一些基本信息。</p>
+<p><img src="https://i.loli.net/2021/07/17/QKr2IA89qxb4MUn.png" alt="SSH的IP和端口界面.png"></p>
+<h2 id="搬瓦工SSH密码"><a href="#搬瓦工SSH密码" class="headerlink" title="搬瓦工SSH密码"></a>搬瓦工SSH密码</h2><p>搬瓦工的SSH用户名是root，而SSH密码会在你购买套餐/重装系统/重置密码后发至你注册时所填的绑定邮箱里。如果没有收到或忘记密码了，可以通过重置密码的方式获取root密码。</p>
+<p>因为重置密码需要保证VPS开机状态，所以在进行密码重置前我们要格外注意。在搬瓦工实例管理界面，确保VPS状态为”Running“。</p>
+<p><img src="https://i.loli.net/2021/07/17/KmFerTDf4B6xNSv.png" alt="VPS状态 _1_.png"></p>
+<p>之后选择左侧的”Root password modification“，进入搬瓦工的修改root密码栏目，再点击”Generate and set new root password“就可以修改并设置搬瓦工的ROOT密码了。</p>
+<p><img src="https://i.loli.net/2021/07/17/3ec49NhQIWPFVt1.png" alt="搬瓦工重置密码第二步.png"></p>
 ]]></content>
       <categories>
         <category>搬瓦工</category>
