@@ -70,7 +70,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2023年更新）</title>
+    <title>搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2024年更新）</title>
     <url>/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>Shadowsocks(SS)以及ShadowsocksR(SSR)是之前用的非常多的代理工具，虽然现在逐渐被<a href="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/">V2Ray</a>取代了，但是还是有不少朋友习惯使用SS/SSR，本文分享如何在搬瓦工VPS上搭建SS/SSR代理。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -215,7 +215,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2023年更新）</title>
+    <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2024年更新）</title>
     <url>/build-v2ray-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>大部分国内用户购买搬瓦工VPS都是用于翻墙的，但是很多朋友在买了搬瓦工VPS并不知道如何搭建代理，今天就以目前最火也是最稳的代理方式V2Ray为例，从零开始介绍搬瓦工VPS如何搭建V2Ray代理实现科学上网翻墙。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -277,49 +277,49 @@
 <h2 id="搭建V2Ray代理"><a href="#搭建V2Ray代理" class="headerlink" title="搭建V2Ray代理"></a>搭建V2Ray代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
 <p>输入下面命令安装V2Ray：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/bwg_v2ray)</span><br></pre></td></tr></table></figure>
+
 <p>这里如果提示<code>curl: command not found</code>，则先安装curl：</p>
 <ul>
 <li>Ubuntu/Debian系统安装curl方法: <code>apt-get update -y &amp;&amp; apt-get install curl -y</code></li>
 <li>CentOS系统安装curl方法: <code>yum update -y &amp;&amp; yum install curl -y</code></li>
 </ul>
 <p>安装好curl后再次运行<code>bash &lt;(curl -s -L https://git.io/bwg_v2ray)</code>即可。</p>
-<p>第一步是提示安装还是卸载，自然是开始安装，输入1即可开始安装：</p>
-<p><img src="https://i.loli.net/2021/08/05/LOAWaQhzGoDNBnY.png" alt="v2ray-install.png"></p>
-<p>之后是选择V2Ray传输协议，很多种，包括TCP、WebSocket等，如果你不知道怎么选就直接回车选择默认的TCP即可：</p>
-<p><img src="https://i.loli.net/2021/08/05/gkBQqrY1lG5ZD9a.png" alt="v2ray-protocol-option.png"></p>
-<p>接下来就是一些其他设置，如V2Ray端口、是否开启广告拦截、是否配置Shadowsocks等，一样的，如果你不知道怎么选就直接回车选择默认的即可：</p>
-<p><img src="https://i.loli.net/2021/08/05/F3vdb9pfMUgytwH.png" alt="v2ray-other-options.png"></p>
-<p>选完配置后，就到了最后一步，确认无误后按下回车键开始安装V2Ray：</p>
-<p><img src="https://i.loli.net/2021/08/05/sihXO562mdDuFfR.png" alt="v2ray-install-start.png"></p>
-<p>最后，如下图所示，就表示你的搬瓦工VPS成功安装V2Ray了，页面上显示的是你V2Ray的连接信息：</p>
-<p><img src="https://i.loli.net/2021/08/05/KV9tenqiwbPG7Ak.png" alt="v2ray-install-end.png"></p>
-<p>配置文件路径：</p>
+<p>执行完成后会自动一键安全V2Ray代理，如下图所示：</p>
+<p><img src="https://bwgvps.github.io/images/v2ray-result.png" alt="v2ray-install.png"></p>
+<p>连接信息、链接（方便导入到软件）都有。</p>
+<h2 id="管理V2Ray代理"><a href="#管理V2Ray代理" class="headerlink" title="管理V2Ray代理"></a>管理V2Ray代理</h2><p>成功安装V2Ray后，我们直接输入<code>v2ray</code>即可打开管理页面，如下图，之后就是按提示操作即可，如果你不想执行任何功能，直接按 Enter 回车退出即可）：</p>
+<p><img src="https://bwgvps.github.io/images/v2ray-manage.png" alt="v2ray-manage.png"></p>
+<p>新的V2Ray脚本简化了很多流程，例如我们常用的是 (添加、更改、查看、删除) 配置，以下内容让你可以快速掌握使用</p>
+<p><strong>1、添加配置</strong></p>
 <ul>
-<li>V2Ray 配置文件路径：/etc/v2ray/config.json</li>
-<li>Caddy 配置文件路径：/etc/caddy/Caddyfile</li>
-<li>脚本配置文件路径: /etc/v2ray/233blog_v2ray_backup.conf</li>
+<li><code>v2ray add</code> -&gt; 添加配置</li>
+<li><code>v2ray add ss</code> -&gt; 添加一个 Shadowsocks 配置</li>
+<li><code>v2ray add tcp</code> -&gt; 添加一个 VMess-TCP 配置</li>
+<li><code>v2ray add kcpd</code> -&gt; 添加一个 VMess-mKCP-dynamic-port 动态端口配置</li>
 </ul>
-<h2 id="管理V2Ray代理"><a href="#管理V2Ray代理" class="headerlink" title="管理V2Ray代理"></a>管理V2Ray代理</h2><p>成功安装V2Ray后，我们直接输入<code>v2ray</code>即可打开管理页面，如下图：</p>
-<p><img src="https://i.loli.net/2021/08/05/2W4vXpLy8mfUNYA.png" alt="v2ray-manage.png"></p>
-<p>常见的管理命令如下：</p>
+<p>备注，使用 <code>v2ray add</code> 添加配置的时候，仅 *TLS 相关协议配置必须提供域名，其他均可自动化处理。</p>
+<p>如需查看更多 add 参数用法，请查看下面的 add 说明</p>
+<p><strong>2、更改配置</strong></p>
 <ul>
-<li><code>v2ray info</code> 查看 V2Ray 配置信息</li>
-<li><code>v2ray config</code> 修改 V2Ray 配置</li>
-<li><code>v2ray link</code> 生成 V2Ray 配置文件链接</li>
-<li><code>v2ray infolink</code> 生成 V2Ray 配置信息链接</li>
-<li><code>v2ray qr</code> 生成 V2Ray 配置二维码链接</li>
-<li><code>v2ray ss</code> 修改 Shadowsocks 配置</li>
-<li><code>v2ray ssinfo</code> 查看 Shadowsocks 配置信息</li>
-<li><code>v2ray ssqr</code> 生成 Shadowsocks 配置二维码链接</li>
-<li><code>v2ray status</code> 查看 V2Ray 运行状态</li>
-<li><code>v2ray start</code> 启动 V2Ray</li>
-<li><code>v2ray stop</code> 停止 V2Ray</li>
-<li><code>v2ray restart</code> 重启 V2Ray</li>
-<li><code>v2ray log</code> 查看 V2Ray 运行日志</li>
-<li><code>v2ray update</code> 更新 V2Ray</li>
-<li><code>v2ray update.sh</code> 更新 V2Ray 管理脚本</li>
-<li><code>v2ray uninstall</code> 卸载 V2Ray</li>
+<li><code>v2ray change</code> -&gt; 更改配置</li>
+<li><code>v2ray change tcp</code> -&gt; 更改 TCP 相关配置</li>
+<li><code>v2ray change tcp port auto</code> -&gt; 更改 TCP 相关配置的端口，端口使用自动创建，也可以使用 <code>v2ray port tcp auto</code></li>
+<li><code>v2ray change kcp id auto</code> -&gt; 更改 mKCP 相关配置的 UUID，UUID 使用自动创建，也可以使用 <code>v2ray id tcp auto</code></li>
 </ul>
+<p>如需查看更多 change 参数用法，请查看下面的 change 说明</p>
+<p><strong>3、查看配置：</strong></p>
+<ul>
+<li><code>v2ray info</code> -&gt; 查看配置</li>
+<li><code>v2ray info tcp</code> -&gt; 查看 TCP 相关配置</li>
+<li><code>v2ray info kcp</code> -&gt; 查看 kcp 相关配置</li>
+</ul>
+<p><strong>4、删除配置</strong></p>
+<ul>
+<li><code>v2ray del</code> -&gt; 删除配置</li>
+<li><code>v2ray del kcp</code> -&gt; 删除 KCP 相关配置</li>
+<li><code>v2ray del tcp</code> -&gt; 删除 TCP 相关配置</li>
+</ul>
+<p><strong>提醒，谨慎使用 del 参数</strong></p>
 <h2 id="配置V2Ray客户端"><a href="#配置V2Ray客户端" class="headerlink" title="配置V2Ray客户端"></a>配置V2Ray客户端</h2><p>完成V2Ray服务端搭建后，我们就需要在本地客户端配置V2Ray了，支持iOS、Android手机、Mac、Windows等，其实就是在客户端上填入上一步的连接信息即可。</p>
 <p>详细教程整理如下。</p>
 <p><strong>1、iOS苹果手机客户端</strong></p>
@@ -330,32 +330,29 @@
 <p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/Mac%E5%AE%A2%E6%88%B7%E7%AB%AFV2RayX%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Mac客户端V2RayX下载方法与使用教程</a></p>
 <p><strong>4、Windows客户端</strong></p>
 <p><a href="https://github.com/bwgvps/v2ray-tutorial/wiki/Windows%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayN%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Windows客户端v2rayN下载方法与使用教程</a></p>
-<h2 id="搭建V2Ray常见问题"><a href="#搭建V2Ray常见问题" class="headerlink" title="搭建V2Ray常见问题"></a>搭建V2Ray常见问题</h2><p>这个V2Ray一键脚本支持：</p>
-<ol>
-<li>支持 V2Ray 多数传输协议</li>
-<li>支持 WebSocket + TLS / HTTP/2</li>
-<li>支持 动态端口 (WebSocket + TLS，Socks5， HTTP/2 除外)</li>
-<li>支持 屏蔽广告</li>
-<li>支持 配置 Shadowsocks</li>
-<li>支持 下载客户端配置文件 (不用 Xshell 也可以下载)</li>
-<li>客户端配置文件同时支持 SOCKS 和 HTTP</li>
-<li>支持 生成 V2Ray 配置二维码链接 (仅适用部分客户端)</li>
-<li>支持 生成 V2Ray 配置信息链接</li>
-<li>支持 生成 Shadowsocks 配置二维码链接</li>
-<li>支持修改 V2Ray 传输协议</li>
-<li>支持修改 V2Ray 端口</li>
-<li>支持修改 动态端口</li>
-<li>支持修改 用户ID</li>
-<li>支持修改 TLS 域名</li>
-<li>支持修改 Shadowsocks 端口</li>
-<li>支持修改 Shadowsocks 密码</li>
-<li>支持修改 Shadowsocks 加密协议</li>
-<li>自动启用 BBR 优化 (如果内核支持)</li>
-<li>集成可选安装 BBR (by teddysun.com)</li>
-<li>集成可选安装 锐速 (by moeclub.org)</li>
-<li>一键 查看运行状态 / 查看配置信息 / 启动 / 停止 / 重启 / 更新 / 卸载 / 等等…</li>
-<li>人性化向导 &amp; 纯净安装 &amp; 卸载彻底</li>
-</ol>
+<h2 id="搭建V2Ray常见问题"><a href="#搭建V2Ray常见问题" class="headerlink" title="搭建V2Ray常见问题"></a>搭建V2Ray常见问题</h2><p>无法使用一般都是两种情况，一是无法连接上端口，二是客户端内核支持有问题。</p>
+<p>如果你的 VPS 有外部防火墙，请确保你已经开放了端口</p>
+<p>测试端口是否能连接上：</p>
+<p>打开：<a href="https://tcp.ping.pe/">https://tcp.ping.pe/</a></p>
+<p>写上你的 VPS IP 跟端口；内容为 ip:端口，示例：<code>1.1.1.1:443</code>，然后点击 <code>Go</code>；或者直接回车</p>
+<p>如果显示 successful；证明端口能连接；如果显示 failed；那是无法连接上端口。</p>
+<p>提醒，你可以使用 <code>v2ray ip</code> 查看 VPS IP。</p>
+<p>关闭防火墙，执行如下命令：</p>
+<p><code>systemctl stop firewalld; systemctl disable firewalld; ufw disable</code></p>
+<p>关闭防火墙之后再测试一下端口是否通，如果不通，你可能还有外部防火墙没关， <strong>必须要能连接上端口才能正常使用</strong> 。</p>
+<p>如果能连接上端口，那就继续</p>
+<p>使用 <code>v2ray add ss</code> 添加一个 SS 看看能不能正常使用，如果正常使用，证明运行没有问题。</p>
+<p>提醒，默认安装的 V2Ray 内核为最新版本</p>
+<p>如果无法使用，可能是你客户端的内核太旧</p>
+<p>请尝试使用不同的客户端进行测试；比如 v2rayN；v2rayNG 等</p>
+<p>请尝试设置 VMessAEAD，某些客户端会有相关选项</p>
+<p>某些客户端得把 额外id(alterid) 填写为 0；比如垃圾苹果那边的东西</p>
+<p>解决方案一，请尝试将服务器端的内核版本降级</p>
+<p>使用 <code>v2ray update core 4.45.2</code> 降级即可</p>
+<p>解决方案二，升级客户端内核</p>
+<blockquote>
+<p>备注，请尽量将客户端内核和服务器端内核保持一致！<strong>内核版本低于 5 可能会出现莫名其妙的问题</strong></p>
+</blockquote>
 <p>在使用过程中一般不会出现问题，直接选择下一步就可以了，如果你的系统不支持使用这个脚本，可以尝试更换一个系统，支持Ubuntu 16+ / Debian 8+ / CentOS 7+，推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化。</p>
 ]]></content>
       <categories>
@@ -367,7 +364,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2023年更新）</title>
+    <title>搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2024年更新）</title>
     <url>/build-xray-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>Xray是因为许可问题从V2Ray独立出来的一个分支，兼容V2Ray的配置，并且提供完整的VLESS和XTLS支持。下面从零开始介绍搬瓦工VPS如何搭建X2ray代理实现科学上网翻墙，一键脚本搭建VLESS+TCP+XTLS。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -428,15 +425,15 @@
 </a></p>
 <h2 id="准备域名"><a href="#准备域名" class="headerlink" title="准备域名"></a>准备域名</h2><p>VLESS+TCP+XTLS模式是需要域名的，我们可以去NameSilo注册一个便宜的域名，例如.co结尾的域名，一年大概20块钱，再添加A记录指向我们VPS的IP地址。</p>
 <p>这个教程还是比较简单的，如果你知道如何添加A记录，可以直接谷歌相关教程。</p>
-<h2 id="搭建V2Ray代理"><a href="#搭建V2Ray代理" class="headerlink" title="搭建V2Ray代理"></a>搭建V2Ray代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
+<h2 id="搭建Xray代理"><a href="#搭建Xray代理" class="headerlink" title="搭建Xray代理"></a>搭建Xray代理</h2><p>目前，已经成功购买搬瓦工VPS，并且成功连上搬瓦工VPS了。</p>
 <p>输入下面命令安装V2Ray：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -sL https://s.hijk.art/xray.sh)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/atrandys/xray/main/install_triple_config.sh)</span><br></pre></td></tr></table></figure>
 <p>这里如果提示<code>curl: command not found</code>，则先安装curl：</p>
 <ul>
 <li>Ubuntu/Debian系统安装curl方法: <code>apt-get update -y &amp;&amp; apt-get install curl -y</code></li>
 <li>CentOS系统安装curl方法: <code>yum update -y &amp;&amp; yum install curl -y</code></li>
 </ul>
-<p>安装好curl后再次运行<code>bash &lt;(curl -sL https://s.hijk.art/xray.sh)</code>即可。</p>
+<p>安装好curl后再次运行<code>bash &lt;(curl -Ls https://raw.githubusercontent.com/atrandys/xray/main/install_triple_config.sh)</code>即可。</p>
 <p>第一步是提示安装还是卸载，这个脚本支持很多版本的Xray和V2ray，出于安全和稳定性方面的考虑，一般建议选择<strong>VLESS+TCP+XTLS</strong>，即输入<em>8</em>开始安装：</p>
 <p><img src="https://s2.loli.net/2021/12/04/ki1oqhTm6IN2vVf.jpg" alt="xary-install-1.jpg"></p>
 <p>这是是选择伪装域名，因为使用<strong>VLESS+TCP+XTLS</strong>是需要搭建一个网站来伪装代理流量的，以此来防止IP被封，输入<em>y</em>，并输入我们刚才准备的域名：</p>
