@@ -46,7 +46,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工SSH连接信息查看：IP、端口、密码</title>
+    <title>搬瓦工SSH连接信息查看：IP、端口、密码（2024年更新）</title>
     <url>/bandwagonhost-vps-info/</url>
     <content><![CDATA[<p>在搬瓦工VPS方案购买成功后，VPS的连接信息就会即时发送到你的注册邮箱，但是想要开始使用搬瓦工VPS，需要登陆SSH。对此许多朋友有很多疑惑，比如登录所需要的的IP地址是什么、SSH端口号是什么以及SSH密码怎么获得？所以本文就分享一下搬瓦工连结SSH的具体教程，其中最重要的就是如何进行信息查看，获取登陆所需的信息。</p>
 <h2 id="搬瓦工SSH-IP和端口"><a href="#搬瓦工SSH-IP和端口" class="headerlink" title="搬瓦工SSH IP和端口"></a>搬瓦工SSH IP和端口</h2><p>搬瓦工官网：<a href="https://linknn.net/bwg">点击打开搬瓦工官网</a></p>
@@ -481,7 +481,7 @@
       </tags>
   </entry>
   <entry>
-    <title>本地Windows/Mac连接搬瓦工VPS教程</title>
+    <title>本地Windows/Mac连接搬瓦工VPS教程（2024年更新）</title>
     <url>/connect-bandwagonhost-vps/</url>
     <content><![CDATA[<p>获得信息后，大家会都迫切的去进行本地连接，但是呢实际操作又会出现一些障碍，所以本文就Windows系统和Mac系统如何进行搬瓦工 VPS本地连接，做了一份详细的教程，希望能对大家的操作有帮助。</p>
 <p>如果你还不知道搬瓦工VPS的连接信息是什么，相信这篇教程可以帮到你：<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
@@ -593,7 +593,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工注册与购买教程，循环优惠码，支持支付宝付款</title>
+    <title>搬瓦工注册与购买教程，循环优惠码，支持支付宝付款（2024年更新）</title>
     <url>/purchase-bandwagonhost/</url>
     <content><![CDATA[<p>由于搬瓦工官网是全英文，所以一些英文不好的朋友们，在选择、注册和购买搬瓦工VPS方案时会有这样或那样的疑惑。比如搬瓦工VPS方案选择哪种？搬瓦工怎么注册？搬瓦工最新优惠码是什么？搬瓦工怎么支付？面对这些种种疑惑，本文就为大家整理了详细的搬瓦工新用户注册和购买教程，这样顾客朋友们就可以自己简单快捷的进行操作了。</p>
 <h2 id="搬瓦工VPS方案选择"><a href="#搬瓦工VPS方案选择" class="headerlink" title="搬瓦工VPS方案选择"></a>搬瓦工VPS方案选择</h2><p>搬瓦工有很多方案可供选择，我们在购买搬瓦工VPS前第一件事就是要确定我们最需要的是哪一款搬瓦工方案。</p>
@@ -664,7 +664,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工机场Just My Socks注册与购买教程</title>
+    <title>搬瓦工机场Just My Socks注册与购买教程（2024年更新）</title>
     <url>/purchase-justmysocks/</url>
     <content><![CDATA[<p>Just My Socks是搬瓦工官方机场，提供Shadowsocks和V2ray服务。Just My Socks方案总能基本满足大家对流量的要求，但是在进行注册和购买时又会存在一些小问题，使大家困扰不已。所以今天本文就对注册与购买作出了详细的整理，希望可以帮到大家，让大家的操作更加流畅。</p>
 <h2 id="Just-My-Socks方案整理"><a href="#Just-My-Socks方案整理" class="headerlink" title="Just My Socks方案整理"></a>Just My Socks方案整理</h2><p>Just My Socks官网：<a href="https://linknn.net/jms">justmysocks2.net</a></p>
