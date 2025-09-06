@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>搬瓦工优惠码分享（2024年最新）</title>
+    <title>搬瓦工优惠码分享（2025年最新）</title>
     <url>/bandwagonhost-promotional-code/</url>
     <content><![CDATA[<p>搬瓦工优惠码（Promotional Code）提供循环优惠，我们在购买搬瓦工VPS时使用搬瓦工优惠码可以获取相应的折扣，本文整理最新的搬瓦工优惠码。</p>
-<p>2024年最新可用搬瓦工优惠码以及循环优惠百分比整理如下：</p>
+<p>2025年最新可用搬瓦工优惠码以及循环优惠百分比整理如下：</p>
 <table>
 <thead>
 <tr>
@@ -46,7 +46,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工SSH连接信息查看：IP、端口、密码（2024年更新）</title>
+    <title>搬瓦工SSH连接信息查看：IP、端口、密码（2025年更新）</title>
     <url>/bandwagonhost-vps-info/</url>
     <content><![CDATA[<p>在搬瓦工VPS方案购买成功后，VPS的连接信息就会即时发送到你的注册邮箱，但是想要开始使用搬瓦工VPS，需要登陆SSH。对此许多朋友有很多疑惑，比如登录所需要的的IP地址是什么、SSH端口号是什么以及SSH密码怎么获得？所以本文就分享一下搬瓦工连结SSH的具体教程，其中最重要的就是如何进行信息查看，获取登陆所需的信息。</p>
 <h2 id="搬瓦工SSH-IP和端口"><a href="#搬瓦工SSH-IP和端口" class="headerlink" title="搬瓦工SSH IP和端口"></a>搬瓦工SSH IP和端口</h2><p>搬瓦工官网：<a href="https://linknn.net/bwg">点击打开搬瓦工官网</a></p>
@@ -70,7 +70,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2024年更新）</title>
+    <title>搬瓦工VPS搭建Shadowsocks / ShadowsocksR (SS/SSR) 代理科学上网翻墙教程（2025年更新）</title>
     <url>/build-shadowsocks-shadowsocksr-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>Shadowsocks(SS)以及ShadowsocksR(SSR)是之前用的非常多的代理工具，虽然现在逐渐被<a href="https://bwgvps.github.io/build-v2ray-on-bandwagonhost-vps/">V2Ray</a>取代了，但是还是有不少朋友习惯使用SS/SSR，本文分享如何在搬瓦工VPS上搭建SS/SSR代理。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -215,7 +215,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2024年更新）</title>
+    <title>搬瓦工VPS搭建V2Ray代理科学上网翻墙教程（2025年更新）</title>
     <url>/build-v2ray-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>大部分国内用户购买搬瓦工VPS都是用于翻墙的，但是很多朋友在买了搬瓦工VPS并不知道如何搭建代理，今天就以目前最火也是最稳的代理方式V2Ray为例，从零开始介绍搬瓦工VPS如何搭建V2Ray代理实现科学上网翻墙。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -364,7 +364,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2024年更新）</title>
+    <title>搬瓦工VPS使用Xray一键脚本搭建VLESS+TCP+XTLS科学上网翻墙教程（2025年更新）</title>
     <url>/build-xray-on-bandwagonhost-vps/</url>
     <content><![CDATA[<p>Xray是因为许可问题从V2Ray独立出来的一个分支，兼容V2Ray的配置，并且提供完整的VLESS和XTLS支持。下面从零开始介绍搬瓦工VPS如何搭建X2ray代理实现科学上网翻墙，一键脚本搭建VLESS+TCP+XTLS。</p>
 <h2 id="购买搬瓦工VPS"><a href="#购买搬瓦工VPS" class="headerlink" title="购买搬瓦工VPS"></a>购买搬瓦工VPS</h2><p>第一步自然是购买搬瓦工VPS，一般来说，推荐大家购买搬瓦工CN2 GIA（美国CN2 GIA）套餐，三网CN2 GIA线路，国内访问速度快，晚高峰也不卡顿，季付49.99美元起，国内体验非常不错。如果你预算不够，则购买搬瓦工CN2 GT（美国CN2 GT）套餐，线路质量没有CN2 GIA好，但是国内速度也比非优化线路要好，年付49.99美元起。最后，如果你预算很多，那么直接购买搬瓦工香港CN2 GIA，香港线路，三网直连，低延迟、速度快。</p>
@@ -481,7 +481,7 @@
       </tags>
   </entry>
   <entry>
-    <title>本地Windows/Mac连接搬瓦工VPS教程（2024年更新）</title>
+    <title>本地Windows/Mac连接搬瓦工VPS教程（2025年更新）</title>
     <url>/connect-bandwagonhost-vps/</url>
     <content><![CDATA[<p>获得信息后，大家会都迫切的去进行本地连接，但是呢实际操作又会出现一些障碍，所以本文就Windows系统和Mac系统如何进行搬瓦工 VPS本地连接，做了一份详细的教程，希望能对大家的操作有帮助。</p>
 <p>如果你还不知道搬瓦工VPS的连接信息是什么，相信这篇教程可以帮到你：<a href="https://bwgvps.github.io/bandwagonhost-vps-info/">搬瓦工SSH连接信息查看：IP、端口、密码</a></p>
@@ -509,7 +509,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理（2024年更新）</title>
+    <title>搬瓦工机场Just My Socks使用教程：连接信息查看，本地连接，以及常见教程整理（2025年更新）</title>
     <url>/justmysocks-tutorial/</url>
     <content><![CDATA[<p>Just My Socks怎么用？之前已经介绍了<a href="https://bwgvps.github.io/purchase-justmysocks/">搬瓦工机场Just My Socks注册与购买教程</a>，那么买了后怎么连接Just My Socks呢？带着这些疑问，本文分享Just My Socks使用教程，包括连接信息查看、本地使用方法，以及常见的后台教程。</p>
 <h2 id="Just-My-Socks连接信息查看"><a href="#Just-My-Socks连接信息查看" class="headerlink" title="Just My Socks连接信息查看"></a>Just My Socks连接信息查看</h2><p>如果你还没有购买，则可以参考<a href="https://bwgvps.github.io/purchase-justmysocks/">搬瓦工机场Just My Socks注册与购买教程</a>先去注册一个账号，Just My Socks支持7天无理由退款，所以大家可以放心购买。</p>
@@ -593,7 +593,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工注册与购买教程，循环优惠码，支持支付宝付款（2024年更新）</title>
+    <title>搬瓦工注册与购买教程，循环优惠码，支持支付宝付款（2025年更新）</title>
     <url>/purchase-bandwagonhost/</url>
     <content><![CDATA[<p>由于搬瓦工官网是全英文，所以一些英文不好的朋友们，在选择、注册和购买搬瓦工VPS方案时会有这样或那样的疑惑。比如搬瓦工VPS方案选择哪种？搬瓦工怎么注册？搬瓦工最新优惠码是什么？搬瓦工怎么支付？面对这些种种疑惑，本文就为大家整理了详细的搬瓦工新用户注册和购买教程，这样顾客朋友们就可以自己简单快捷的进行操作了。</p>
 <h2 id="搬瓦工VPS方案选择"><a href="#搬瓦工VPS方案选择" class="headerlink" title="搬瓦工VPS方案选择"></a>搬瓦工VPS方案选择</h2><p>搬瓦工有很多方案可供选择，我们在购买搬瓦工VPS前第一件事就是要确定我们最需要的是哪一款搬瓦工方案。</p>
@@ -664,7 +664,7 @@
       </tags>
   </entry>
   <entry>
-    <title>搬瓦工机场Just My Socks注册与购买教程（2024年更新）</title>
+    <title>搬瓦工机场Just My Socks注册与购买教程（2025年更新）</title>
     <url>/purchase-justmysocks/</url>
     <content><![CDATA[<p>Just My Socks是搬瓦工官方机场，提供Shadowsocks和V2ray服务。Just My Socks方案总能基本满足大家对流量的要求，但是在进行注册和购买时又会存在一些小问题，使大家困扰不已。所以今天本文就对注册与购买作出了详细的整理，希望可以帮到大家，让大家的操作更加流畅。</p>
 <h2 id="Just-My-Socks方案整理"><a href="#Just-My-Socks方案整理" class="headerlink" title="Just My Socks方案整理"></a>Just My Socks方案整理</h2><p>Just My Socks官网：<a href="https://linknn.net/jms">justmysocks2.net</a></p>
